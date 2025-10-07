@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Compass Pro | by LovingSmiles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background word-cloud -->
+  <div class="bg">
+    <div class="bg-words">
+      <span class="bg-word" style="--scale:1;--dur:25s;top:20%;left:15%;">Growth</span>
+      <span class="bg-word" style="--scale:1.2;--dur:35s;top:60%;left:45%;">Faith</span>
+      <span class="bg-word" style="--scale:0.8;--dur:30s;top:40%;left:80%;">Stillness</span>
+      <span class="bg-word" style="--scale:1.4;--dur:28s;top:75%;left:25%;">Vision</span>
+      <span class="bg-word" style="--scale:1;--dur:32s;top:10%;left:70%;">Purpose</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">Life Compass Pro</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#vision">Vision Board</a>
+        <a href="#journal">Journal</a>
+        <a href="#growth">Growth Areas</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section active wrap">
+    <div class="card center stack-md">
+      <h1>Life Compass: Stillness After the Fire</h1>
+      <p class="muted">
+        A digital sanctuary for spiritual, physical, emotional, mental, and financial growth.
+        Crafted by <b>LovingSmiles</b>, inspired by stillness, resilience, and purpose.
+      </p>
+      <button class="btn btn-primary">Start My Journey</button>
+    </div>
+  </section>
+
+  <!-- Vision Board Section -->
+  <section id="vision" class="section wrap">
+    <h2>🌿 Vision Board</h2>
+    <p>Capture dreams, goals, and blessings. Upload images and ideas that inspire your journey.</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+    </div>
+    <div class="space"></div>
+    <button class="btn btn-primary">Upload New Vision</button>
+  </section>
+
+  <!-- Journal Section -->
+  <section id="journal" class="section wrap">
+    <h2>🖋️ Journal & Reflection</h2>
+    <p>Track your stillness, gratitude, and lessons. Tell your life story day by day.</p>
+    <form class="form-grid cols-2">
+      <label>Title</label>
+      <input type="text" placeholder="Today's Reflection..." />
+      <label>Entry</label>
+      <textarea rows="6" placeholder="Write your thoughts..."></textarea>
+    </form>
+    <button class="btn btn-success mt-2">Save Entry</button>
+  </section>
+
+  <!-- Growth Areas Section -->
+  <section id="growth" class="section wrap">
+    <h2>💎 Growth Areas</h2>
+    <p>Select a category to focus your improvement.</p>
+    <div class="tabs">
+      <div class="tab active">Spiritual</div>
+      <div class="tab">Physical</div>
+      <div class="tab">Emotional</div>
+      <div class="tab">Mental</div>
+      <div class="tab">Financial</div>
+    </div>
+    <div class="card mt-2">
+      <h3>Spiritual Growth</h3>
+      <p class="muted">Reflect daily, set temple goals, and reconnect with peace.</p>
+      <button class="btn btn-primary">Add New Goal</button>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section wrap">
+    <h2>💰 Plans & Pricing</h2>
+    <p class="muted">Start free. Unlock your growth when ready.</p>
+    <div class="pricing">
+      <article class="plan">
+        <h3>Free Trial</h3>
+        <p class="price">$0 / 30 days</p>
+        <ul class="features">
+          <li>Full access for 30 days</li>
+          <li>Keep your saved data even after trial</li>
+        </ul>
+        <div class="cta"><button class="btn btn-primary">Start Trial</button></div>
+      </article>
+      <article class="plan">
+        <h3>Monthly</h3>
+        <p class="price">$20 / mo</p>
+        <ul class="features">
+          <li>Unlimited journaling</li>
+          <li>Vision board uploads</li>
+          <li>AI coaching suggestions</li>
+        </ul>
+        <div class="cta"><button class="btn btn-success">Subscribe</button></div>
+      </article>
+      <article class="plan">
+        <h3>Yearly</h3>
+        <p class="price">$120 / yr</p>
+        <ul class="features">
+          <li>2 months free</li>
+          <li>Priority support</li>
+        </ul>
+        <div class="cta"><button class="btn btn-primary">Upgrade</button></div>
+      </article>
+      <article class="plan">
+        <h3>Lifetime</h3>
+        <p class="price">$250</p>
+        <ul class="features">
+          <li>Full access for life</li>
+          <li>All future updates</li>
+          <li>Legacy recognition</li>
+        </ul>
+        <div class="cta"><button class="btn btn-warning">Join Forever</button></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section wrap">
+    <h2>📨 Contact & Support</h2>
+    <p>Questions or feedback? Reach out to the Life Compass Pro team.</p>
+    <form class="form-grid cols-2 max-600">
+      <label>First Name</label><input type="text" />
+      <label>Last Name</label><input type="text" />
+      <label>Email</label><input type="email" />
+      <label>Message</label><textarea rows="5"></textarea>
+      <button class="btn btn-primary mt-2">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Guided by Faith. Strengthened by Fire. Moved by Stillness.</p>
+    <p>&copy; 2025 Life Compass Pro — by LovingSmiles</p>
+  </footer>
+</body>
+</html>
