@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life Compass Pro — Journal • Goals • Vision • Planner</title>
+  <meta name="description" content="Local-first life OS: multi-user sign-in, journal, goals, vision board, habits, growth areas, gallery, and 100-year calendar planner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- AUTH SCREEN -->
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <h1>Life Compass Pro</h1>
+      <p class="muted">Sign in or create an account (local device only).</p>
+      <form id="authForm" class="form">
+        <label>Email
+          <input name="email" type="email" required placeholder="you@example.com">
+        </label>
+        <label>Password
+          <input name="password" type="password" required placeholder="••••••••">
+        </label>
+        <div class="tools-row">
+          <button class="btn" type="submit">Sign in</button>
+          <button class="btn btn--ghost" type="button" id="signupBtn">Create account</button>
+        </div>
+      </form>
+      <output id="authMsg" class="muted small"></output>
+    </div>
+  </div>
+
+  <!-- APP SHELL -->
+  <header class="site-header" id="appHeader" hidden>
+    <div class="wrap">
+      <a class="brand" href="#dashboard">Life Compass Pro</a>
+      <nav aria-label="Primary">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">☰</button>
+        <ul id="navList" class="nav">
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#habits">Habits</a></li>
+          <li><a href="#areas">Growth Areas</a></li>
+          <li><a href="#planner">Planner</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><button id="signOut" class="chip">Sign out</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" hidden>
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section">
+      <div class="wrap">
+        <header class="section__header">
+          <h1>Dashboard</h1>
+          <p class="muted">Local-first. Multi-user. Everything is saved privately on this device (export backups often).</p>
+        </header>
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Check-in</h3>
+            <form id="checkinForm" class="form">
+              <label>Mood (0–10) <input type="number" name="mood" min="0" max="10" value="7" required></label>
+              <label>Focus for today <input type="text" name="focus" placeholder="One priority"></label>
+              <label>Gratitude <input type="text" name="gratitude" placeholder="Something you’re grateful for"></label>
+              <button class="btn" type="submit">Save</button>
+            </form>
+            <output id="checkinMsg" class="muted small"></output>
+          </article>
+
+          <article class="card">
+            <h3>Quick Capture</h3>
+            <form id="quickForm" class="form">
+              <label>Note <textarea name="note" rows="5" placeholder="Idea, reminder, thought…"></textarea></label>
+              <button class="btn btn--ghost" type="submit">Send to Journal</button>
+            </form>
+            <p class="muted small">Tip: Tag later in the Journal.</p>
+          </article>
+
+          <article class="card">
+            <h3>Upcoming</h3>
+            <ul id="upcomingList" class="tick-list"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="section alt">
+      <div class="wrap">
+        <header class="section__header"><h2>Journal</h2><p class="muted">Add text + optional photo. Use tags like <code>#spiritual</code> <code>#fitness</code>.</p></header>
+        <form id="journalForm" class="form">
+          <div class="grid grid--2">
+            <label>Title <input name="title" placeholder="Entry title"></label>
+            <label>Tags <input name="tags" placeholder="#spiritual, #gratitude"></label>
+          </div>
+          <label>Entry <textarea name="body" rows="6" placeholder="Free write…"></textarea></label>
+          <div class="grid grid--2">
+            <label>Photo (optional) <input type="file" name="img" accept="image/*"></label>
+            <label>Date <input type="date" name="date"></label>
+          </div>
+          <button class="btn" type="submit">Add entry</button>
+        </form>
+
+        <div class="tools-row">
+          <input id="searchBox" class="search" placeholder="Search title, tags, text">
+          <button id="sortNewest" class="chip">Newest</button>
+          <button id="sortOldest" class="chip">Oldest</button>
+          <button id="filterTagged" class="chip">Filter by tag</button>
+        </div>
+        <div id="journalList" class="list"></div>
+      </div>
+    </section>
+
+    <!-- VISION BOARD -->
+    <section id="vision" class="section">
+      <div class="wrap">
+        <header class="section__header"><h2>Vision Board</h2><p class="muted">Words + images that pull you forward.</p></header>
+        <form id="visionForm" class="form grid grid--2">
+          <label>Vision text <textarea name="text" rows="3" placeholder="I am peaceful, present, and strong…"></textarea></label>
+          <label>Upload image (optional) <input name="img" type="file" accept="image/*"></label>
+          <button class="btn" type="submit">Add</button>
+        </form>
+        <div id="visionGrid" class="masonry"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section alt">
+      <div class="wrap">
+        <header class="section__header"><h2>Gallery</h2><p class="muted">Upload, view, and download your images.</p></header>
+        <form id="galleryForm" class="form grid grid--2">
+          <label>Add photos <input type="file" name="photos" accept="image/*" multiple></label>
+          <button class="btn" type="submit">Upload</button>
+        </form>
+        <div id="galleryGrid" class="masonry"></div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section id="goals" class="section">
+      <div class="wrap">
+        <header class="section__header"><h2>Goals (Kanban)</h2><p class="muted">S.M.A.R.T. goals with drag-and-drop.</p></header>
+        <form id="goalForm" class="form grid grid--2">
+          <label>Goal <input name="title" placeholder="Do 1 pull-up by 2025-08-01"></label>
+          <label>Why <input name="why" placeholder="Feel strong and healthy"></label>
+          <label>Deadline <input type="date" name="due"></label>
+          <label>Tag <input name="category" placeholder="#physical, #school"></label>
+          <label>First tiny step <input name="step" placeholder="Hang 10s x 3 today"></label>
+          <button class="btn" type="submit">Add goal</button>
+        </form>
+        <div id="goalsBoard" class="kanban">
+          <div class="col" data-col="todo"><h3>To Do</h3><div class="drop"></div></div>
+          <div class="col" data-col="doing"><h3>Doing</h3><div class="drop"></div></div>
+          <div class="col" data-col="done"><h3>Done</h3><div class="drop"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABITS -->
+    <section id="habits" class="section alt">
+      <div class="wrap">
+        <header class="section__header"><h2>Habit Tracker</h2><p class="muted">Tap days to build streaks.</p></header>
+        <form id="habitForm" class="form grid grid--2">
+          <label>Habit <input name="name" placeholder="Treadmill 30 min"></label>
+          <label>Area <select name="area"><option>Physical</option><option>Spiritual</option><option>Financial</option><option>Emotional</option><option>Mental</option></select></label>
+          <button class="btn" type="submit">Add habit</button>
+        </form>
+        <div id="habitGrid" class="habit-grid"></div>
+      </div>
+    </section>
+
+    <!-- GROWTH AREAS -->
+    <section id="areas" class="section">
+      <div class="wrap">
+        <header class="section__header"><h2>Growth Areas</h2><p class="muted">Click an area and log thoughts for this hour/day/week.</p></header>
+        <div id="areaGrid" class="grid grid--3"></div>
+      </div>
+    </section>
+
+    <!-- PLANNER (100-year) -->
+    <section id="planner" class="section alt">
+      <div class="wrap">
+        <header class="section__header"><h2>Planner</h2><p class="muted">Click a date to add todos/notes. Jumps to due topics on visit.</p></header>
+        <div class="tools-row">
+          <label class="chip">Year <input id="yearPicker" type="number" min="1900" max="2225" step="1"></label>
+          <button id="todayBtn" class="chip">Today</button>
+        </div>
+        <div id="yearGrid" class="year-grid"></div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="section">
+      <div class="wrap">
+        <header class="section__header"><h2>Settings & Backup</h2><p class="muted">Export/import your data per account. Enable on-visit alerts.</p></header>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Export</h3>
+            <button id="exportBtn" class="btn">Download backup (.json)</button>
+          </article>
+          <article class="card">
+            <h3>Import</h3>
+            <input type="file" id="importFile" accept="application/json">
+            <button id="importBtn" class="btn btn--ghost">Import backup</button>
+            <p class="muted small">Import replaces your current data for this account.</p>
+          </article>
+          <article class="card">
+            <h3>Notifications</h3>
+            <button id="notifyBtn" class="btn">Enable browser notifications</button>
+            <p class="muted small">Notifications work while the site is open. For background alerts, you’d need hosting + service worker.</p>
+          </article>
+          <article class="card">
+            <h3>Theme & Danger</h3>
+            <div class="tools-row">
+              <button id="darkToggle" class="chip">Theme</button>
+              <button id="clearAll" class="chip danger">Reset account (careful)</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <dialog id="modal">
+    <form method="dialog" class="modal-card">
+      <header><h3 id="modalTitle">Details</h3></header>
+      <div id="modalBody"></div>
+      <menu class="tools-row">
+        <button value="cancel" class="chip">Close</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <footer class="site-footer" id="appFooter" hidden>
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Life Compass Pro</p>
+      <div class="foot-actions">
+        <span id="userBadge" class="muted small"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="idb.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
