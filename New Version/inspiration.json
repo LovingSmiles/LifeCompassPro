@@ -1,0 +1,4087 @@
+[
+  {"text":"Start where you are. Use what you have. Do what you can.","author":"Arthur Ashe"},
+  {"text":"Small steps every day lead to big changes.","author":"Unknown"},
+  {"text":"Your future is built by what you do today.","author":"Mahatma Gandhi"},
+  {"text":"Progress, not perfection.","author":"Ryan Holiday"},
+  {"text":"Discipline is choosing what you want most over what you want now.","author":"Abraham Lincoln"},
+  {"text":"You don’t have to be extreme—just consistent.","author":"Unknown"},
+  {"text":"Win the morning, win the day.","author":"Tim Ferriss"},
+  {"text":"Your direction is more important than your speed.","author":"Richard L. Evans"},
+  {"text":"The secret of getting ahead is getting started.","author":"Mark Twain"},
+  {"text":"Little by little, a little becomes a lot.","author":"Tanzanian Proverb"},
+  {"text":"Energy flows where attention goes.","author":"Tony Robbins"},
+  {"text":"The best time to plant a tree was 20 years ago. The second best time is now.","author":"Chinese Proverb"},
+  {"text":"Courage is a habit—practice it.","author":"Mel Robbins"},
+  {"text":"You are one decision away from a different life.","author":"Mel Robbins"},
+  {"text":"Faith is taking the first step even when you don't see the whole staircase.","author":"Martin Luther King Jr."},
+  {"text":"With God all things are possible.","author":"Matthew 19:26"},
+  {"text":"Let your faith be bigger than your fear.","author":"Unknown"},
+  {"text":"Be still and know.","author":"Psalm 46:10"},
+  {"text":"Gratitude turns what we have into enough.","author":"Aesop"},
+  {"text":"What you think, you become. What you feel, you attract. What you imagine, you create.","author":"Buddha"},
+  {"text":"The wound is the place where the Light enters you.","author":"Rumi"},
+  {"text":"Act as if what you do makes a difference. It does.","author":"William James"},
+  {"text":"He who has a why to live can bear almost any how.","author":"Friedrich Nietzsche"},
+  {"text":"We are what we repeatedly do. Excellence, then, is not an act but a habit.","author":"Will Durant"},
+  {"text":"Do the next right thing.","author":"Unknown"},
+  {"text":"The journey of a thousand miles begins with one step.","author":"Lao Tzu"},
+  {"text":"What consumes your mind controls your life.","author":"Unknown"},
+  {"text":"Prayer is when you talk to God; meditation is when you listen.","author":"Diana Robinson"},
+  {"text":"Peace begins with a smile.","author":"Mother Teresa"},
+  {"text":"Where focus goes, energy flows.","author":"Tony Robbins"},
+  {"text":"Purpose is the place where your deep gladness meets the world’s needs.","author":"Frederick Buechner"},
+  {"text":"It always seems impossible until it’s done.","author":"Nelson Mandela"},
+  {"text":"Your life is a message to the world. Make sure it’s inspiring.","author":"Unknown"},
+  {"text":"Joy is the serious business of heaven.","author":"C.S. Lewis"},
+  {"text":"Let your light shine.","author":"Matthew 5:16"},
+  {"text":"The obstacle is the way.","author":"Marcus Aurelius"},
+  {"text":"You are braver than you believe, stronger than you seem, and smarter than you think.","author":"A.A. Milne"},
+  {"text":"Be the reason someone believes in the goodness of people.","author":"Karen Salmansohn"},
+  {"text":"Sweat more in practice, bleed less in battle.","author":"Spartan Proverb"},
+  {"text":"Fear is a reaction. Courage is a decision.","author":"Winston Churchill"},
+  {"text":"What you get by achieving your goals is not as important as what you become by achieving your goals.","author":"Zig Ziglar"},
+  {"text":"One day or day one. You decide.","author":"Unknown"},
+  {"text":"Let go or be dragged.","author":"Zen Proverb"},
+  {"text":"When you can’t control the wind, adjust your sails.","author":"H. Jackson Brown Jr."},
+  {"text":"The soul becomes dyed with the color of its thoughts.","author":"Marcus Aurelius"},
+  {"text":"Faith is the bird that feels the light and sings when the dawn is still dark.","author":"Rabindranath Tagore"},
+  {"text":"Hope is a waking dream.","author":"Aristotle"},
+  {"text":"When you change the way you look at things, the things you look at change.","author":"Wayne Dyer"},
+  {"text":"You are never too old to set another goal or to dream a new dream.","author":"C.S. Lewis"},
+  {"text":"Live the questions now.","author":"Rainer Maria Rilke"},
+  {"text":"Let your hopes, not your hurts, shape your future.","author":"Robert H. Schuller"},
+  {"text":"Don’t dig up in doubt what you planted in faith.","author":"Elisabeth Elliot"},
+  {"text":"Prayer does not change God, but it changes him who prays.","author":"Søren Kierkegaard"},
+  {"text":"The more you praise and celebrate your life, the more there is in life to celebrate.","author":"Oprah Winfrey"},
+  {"text":"What lies behind us and what lies before us are tiny matters compared to what lies within us.","author":"Ralph Waldo Emerson"},
+  {"text":"Be faithful in small things because it is in them that your strength lies.","author":"Mother Teresa"},
+  {"text":"Between stimulus and response there is a space. In that space is our power to choose our response.","author":"Viktor E. Frankl"},
+  {"text":"To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.","author":"Thomas Aquinas"},
+  {"text":"Light tomorrow with today.","author":"Elizabeth Barrett Browning"}
+][
+    { "text": "Start where you are. Use what you have. Do what you can.", "author": "Arthur Ashe" },
+    { "text": "Progress, not perfection.", "author": "Ryan Holiday" },
+    { "text": "Faith is taking the first step even when you don’t see the whole staircase.", "author": "Martin Luther King Jr." },
+    { "text": "Be still and know.", "author": "Psalm 46:10" },
+    { "text": "Let your light shine.", "author": "Matthew 5:16" },
+    { "text": "Peace begins with a smile.", "author": "Mother Teresa" },
+    { "text": "You are one decision away from a different life.", "author": "Mel Robbins" },
+    { "text": "Energy flows where attention goes.", "author": "Tony Robbins" },
+    { "text": "The wound is the place where the Light enters you.", "author": "Rumi" },
+    { "text": "Courage is a habit — practice it.", "author": "Mel Robbins" },
+    { "text": "The more you praise and celebrate your life, the more there is in life to celebrate.", "author": "Oprah Winfrey" },
+    { "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.", "author": "Ralph Waldo Emerson" },
+    { "text": "Be faithful in small things because it is in them that your strength lies.", "author": "Mother Teresa" },
+    { "text": "Between stimulus and response there is a space. In that space is our power to choose our response.", "author": "Viktor E. Frankl" },
+    { "text": "Live the questions now.", "author": "Rainer Maria Rilke" },
+    { "text": "You are never too old to set another goal or to dream a new dream.", "author": "C.S. Lewis" },
+    { "text": "Let your hopes, not your hurts, shape your future.", "author": "Robert H. Schuller" },
+    { "text": "Act as if what you do makes a difference. It does.", "author": "William James" },
+    { "text": "The journey of a thousand miles begins with one step.", "author": "Lao Tzu" },
+    { "text": "Gratitude turns what we have into enough.", "author": "Aesop" },
+    { "text": "Hope is a waking dream.", "author": "Aristotle" },
+    { "text": "Light tomorrow with today.", "author": "Elizabeth Barrett Browning" },
+    { "text": "Do not wait to strike till the iron is hot, but make it hot by striking.", "author": "William Butler Yeats" },
+    { "text": "Embrace your mistakes as opportunities to grow.", "author": "Unknown" },
+    { "text": "Believe in the power of your dreams. Never let anyone tell you they can’t come true.", "author": "Anonymous" },
+    { "text": "You are stronger than you think you are.", "author": "Anonymous" },
+    { "text": "The world needs your light, not your shadow.", "author": "Anonymous" },
+    { "text": "Sometimes you win, sometimes you learn.", "author": "John C. Maxwell" },
+    { "text": "Your direction is more important than your speed.", "author": "Unknown" },
+    { "text": "You don’t have to see the whole staircase, just take the first step.", "author": "Martin Luther King Jr." },
+    { "text": "Never give up, never surrender, and always go for the win.", "author": "Charlie Kirk" },
+    { "text": "Greatness requires the liberty and the drive to make the most of yourself.", "author": "Charlie Kirk" },
+    { "text": "If you believe in something, you need to have the courage to fight for those ideas – not run away from them or try to silence them.", "author": "Charlie Kirk" },
+    { "text": "Always believe you are worthy and capable of what you seek.", "author": "Anonymous" },
+    { "text": "Each day is a new beginning — breathe in, breathe out, and start again.", "author": "Unknown" },
+    { "text": "Be brave enough to live life creatively. The creative place where no one else has ever been.", "author": "Alan Alda" },
+    { "text": "Let go, and the universe will catch you.", "author": "Unknown" },
+    { "text": "Trust the process. Even when it doesn’t make sense in the moment.", "author": "Unknown" },
+    { "text": "Your life is your message to the world. Make it inspiring.", "author": "Unknown" },
+    { "text": "You were given this life because you are strong enough to live it.", "author": "Anonymous" },
+    { "text": "Do what is right, not what is easy.", "author": "Roy T. Bennett" },
+    { "text": "Doubt kills more dreams than failure ever will.", "author": "Suzy Kassem" },
+    { "text": "The only limit to your growth is your willingness to try.", "author": "Unknown" },
+    { "text": "Faith sees the invisible, believes the unbelievable, receives the impossible.", "author": "Corrie ten Boom" },
+    { "text": "The best way to predict your future is to create it.", "author": "Peter Drucker" }
+  ]
+  [
+    {
+      "text": "When something is important enough, you do it even if the odds are not in your favor.",
+      "author": "Elon Musk"
+    },
+    {
+      "text": "Sometimes by losing a battle you find a new way to win the war.",
+      "author": "Donald Trump"
+    },
+    {
+      "text": "The best way to not feel hopeless is to get up and do something.",
+      "author": "Barack Obama"
+    },
+    {
+      "text": "Yes we can.",
+      "author": "Barack Obama"
+    },
+    {
+      "text": "If you believe in something, you need to have the courage to fight for those ideas.",
+      "author": "Charlie Kirk"
+    },
+    {
+      "text": "Start where you are. Use what you have. Do what you can.",
+      "author": "Arthur Ashe"
+    },
+    {
+      "text": "Progress, not perfection.",
+      "author": "Ryan Holiday"
+    },
+    {
+      "text": "Be still, and know that I am God.",
+      "author": "Psalm 46:10 (KJV)"
+    },
+    {
+      "text": "Let your light so shine before men.",
+      "author": "Matthew 5:16 (KJV)"
+    },
+    {
+      "text": "The obstacle is the way.",
+      "author": "Marcus Aurelius"
+    },
+    {
+      "text": "Little by little, a little becomes a lot.",
+      "author": "Tanzanian Proverb"
+    },
+    {
+      "text": "Gratitude turns what we have into enough.",
+      "author": "Aesop"
+    },
+    {
+      "text": "Hope is a waking dream.",
+      "author": "Aristotle"
+    },
+    {
+      "text": "Energy flows where attention goes.",
+      "author": "Tony Robbins"
+    },
+    {
+      "text": "Faith is the bird that feels the light and sings when the dawn is still dark.",
+      "author": "Rabindranath Tagore"
+    },
+    {
+      "text": "The wound is the place where the Light enters you.",
+      "author": "Rumi"
+    },
+    {
+      "text": "Your direction is more important than your speed.",
+      "author": "Richard L. Evans"
+    },
+    {
+      "text": "Walk by faith, not by sight.",
+      "author": "2 Corinthians 5:7 (KJV)"
+    },
+    {
+      "text": "Charity never faileth.",
+      "author": "1 Corinthians 13:8 (KJV)"
+    },
+    {
+      "text": "Press forward with a steadfastness in Christ.",
+      "author": "2 Nephi 31:20 (Book of Mormon)"
+    },
+    {
+      "text": "Choose the right.",
+      "author": "Primary Hymn (LDS)"
+    },
+    {
+      "text": "The kingdom of God is within you.",
+      "author": "Luke 17:21 (KJV)"
+    },
+    {
+      "text": "Do small things with great love.",
+      "author": "Mother Teresa"
+    },
+    {
+      "text": "What you think, you become. What you feel, you attract. What you imagine, you create.",
+      "author": "Buddha"
+    },
+    {
+      "text": "Act as if what you do makes a difference. It does.",
+      "author": "William James"
+    },
+    {
+      "text": "Joy is the serious business of heaven.",
+      "author": "C.S. Lewis"
+    },
+    {
+      "text": "The journey of a thousand miles begins with one step.",
+      "author": "Lao Tzu"
+    },
+    {
+      "text": "Do the next right thing.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "He who has a why to live can bear almost any how.",
+      "author": "Friedrich Nietzsche"
+    },
+    {
+      "text": "The best way to predict your future is to create it.",
+      "author": "Peter Drucker"
+    },
+    {
+      "text": "We are what we repeatedly do. Excellence, then, is not an act but a habit.",
+      "author": "Will Durant"
+    },
+    {
+      "text": "Courage is resistance to fear, mastery of fearânot absence of it.",
+      "author": "Mark Twain"
+    },
+    {
+      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+      "author": "Ian Maclaren"
+    },
+    {
+      "text": "Let go or be dragged.",
+      "author": "Zen Proverb"
+    },
+    {
+      "text": "Blessed are the peacemakers.",
+      "author": "Matthew 5:9 (KJV)"
+    },
+    {
+      "text": "Be the change that you wish to see in the world.",
+      "author": "Mahatma Gandhi"
+    },
+    {
+      "text": "Arise, awake, and stop not till the goal is reached.",
+      "author": "Swami Vivekananda"
+    },
+    {
+      "text": "This too shall pass.",
+      "author": "Proverb"
+    },
+    {
+      "text": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+      "author": "A.A. Milne"
+    },
+    {
+      "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "author": "Winston Churchill"
+    },
+    {
+      "text": "Do not be anxious about tomorrow; sufficient unto the day is the evil thereof.",
+      "author": "Matthew 6:34 (KJV)"
+    },
+    {
+      "text": "Perfect love casteth out fear.",
+      "author": "1 John 4:18 (KJV)"
+    },
+    {
+      "text": "All shall be well, and all shall be well, and all manner of thing shall be well.",
+      "author": "Julian of Norwich"
+    },
+    {
+      "text": "The soul becomes dyed with the color of its thoughts.",
+      "author": "Marcus Aurelius"
+    },
+    {
+      "text": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+      "author": "Zig Ziglar"
+    },
+    {
+      "text": "It always seems impossible until itâs done.",
+      "author": "Nelson Mandela"
+    },
+    {
+      "text": "We can do hard things.",
+      "author": "Glennon Doyle"
+    },
+    {
+      "text": "Be quick to listen, slow to speak, slow to anger.",
+      "author": "James 1:19 (KJV)"
+    },
+    {
+      "text": "Cease to find fault one with another.",
+      "author": "Doctrine and Covenants 88:124"
+    },
+    {
+      "text": "Let your hopes, not your hurts, shape your future.",
+      "author": "Robert H. Schuller"
+    },
+    {
+      "text": "Breathe discipline over drama one small step at a time, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe faith over fear and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe growth over comfort and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe growth over comfort one small step at a time, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe healing over hurry until it becomes who you are, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe love over judgment because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe meaning over metrics and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe peace over pressure and your future will notice, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe purpose over popularity and watch your life change, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe purpose over popularity especially when no one is watching, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe today over someday and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe today over someday and the rest will follow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe truth over trends and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Breathe truth over trends until it becomes who you are, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build consistency over intensity one small step at a time, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build courage over convenience and the rest will follow, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build courage over convenience because small things compound, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build discipline over drama one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build discipline over drama until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build faith over fear and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build gratitude over grumbling and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build gratitude over grumbling until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build growth over comfort until it becomes who you are, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build love over judgment and let grace do the heavy lifting, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build love over judgment and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build meaning over metrics and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build patience over panic one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build peace over pressure and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build presence over distraction and the path will appear, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build progress over perfection and watch your life change, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build service over status and the rest will follow, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build service over status because small things compound, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Build truth over trends one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry consistency over intensity and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry consistency over intensity every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry consistency over intensity until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry gratitude over grumbling and joy will have room to grow, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry growth over comfort and your future will notice, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry growth over comfort and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry growth over comfort especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry growth over comfort every ordinary day, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry growth over comfort every ordinary day, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry healing over hurry and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry hope over worry and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry hope over worry and watch your life change, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry hope over worry and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry light over limits and let God handle the results, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry light over limits until it becomes who you are, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry love over judgment every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry presence over distraction especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Carry truth over trends and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate healing over hurry and watch your life change, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate love over judgment and let grace do the heavy lifting, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate love over judgment one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate meaning over metrics and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate patience over panic because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate peace over pressure and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate peace over pressure and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate presence over distraction and watch your life change, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate progress over perfection and let grace do the heavy lifting, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate purpose over popularity and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate purpose over popularity especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate service over status and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate service over status and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Celebrate truth over trends until it becomes who you are, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase gratitude over grumbling and joy will have room to grow, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase gratitude over grumbling and the next step will become clear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase growth over comfort one small step at a time, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase hope over worry and the next step will become clear, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase hope over worry and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase love over judgment and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase love over judgment one small step at a time, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase peace over pressure and your peace will deepen, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase progress over perfection and your future will notice, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase today over someday and let grace do the heavy lifting, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase today over someday every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase today over someday one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Chase truth over trends and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose consistency over intensity one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose courage over convenience and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose healing over hurry and the next step will become clear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose love over judgment and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose patience over panic and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose presence over distraction especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose purpose over popularity and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Choose today over someday every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give consistency over intensity and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give courage over convenience and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give courage over convenience and the rest will follow, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give healing over hurry and the next step will become clear, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give hope over worry one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give light over limits and the next step will become clear, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give light over limits every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give love over judgment and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give love over judgment one small step at a time, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give peace over pressure and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give presence over distraction and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give presence over distraction until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give purpose over popularity and let grace do the heavy lifting, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give service over status and the next step will become clear, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give today over someday and the rest will follow, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give today over someday and your peace will deepen, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give truth over trends and watch your life change, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give truth over trends and your peace will deepen, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Give truth over trends every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard discipline over drama and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard discipline over drama especially when no one is watching, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard discipline over drama especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard discipline over drama until it becomes who you are, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard gratitude over grumbling until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard hope over worry and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard light over limits one small step at a time, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard love over judgment and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard meaning over metrics and let grace do the heavy lifting, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard patience over panic and watch your life change, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard peace over pressure and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard presence over distraction and the path will appear, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard presence over distraction every ordinary day, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard purpose over popularity and joy will have room to grow, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard service over status and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard truth over trends and joy will have room to grow, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard truth over trends and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Guard truth over trends every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold courage over convenience and joy will have room to grow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold discipline over drama and your peace will deepen, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold gratitude over grumbling and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold healing over hurry and joy will have room to grow, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold hope over worry until it becomes who you are, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold love over judgment and let grace do the heavy lifting, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold peace over pressure until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold presence over distraction one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold progress over perfection and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold purpose over popularity and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold purpose over popularity and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Hold truth over trends and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor courage over convenience until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor discipline over drama and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor discipline over drama and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor faith over fear and let grace do the heavy lifting, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor gratitude over grumbling and let grace do the heavy lifting, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor growth over comfort and your peace will deepen, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor hope over worry and the path will appear, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor patience over panic and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor service over status and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor service over status and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor service over status and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Honor truth over trends and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep courage over convenience and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep gratitude over grumbling and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep gratitude over grumbling and the next step will become clear, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep growth over comfort especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep light over limits every ordinary day, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep meaning over metrics every ordinary day, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep patience over panic and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep peace over pressure and your peace will deepen, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep purpose over popularity and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep purpose over popularity and let grace do the heavy lifting, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep purpose over popularity and your peace will deepen, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep today over someday and the path will appear, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Keep truth over trends and the rest will follow, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into consistency over intensity and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into courage over convenience and joy will have room to grow, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into courage over convenience and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into courage over convenience especially when no one is watching, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into discipline over drama until it becomes who you are, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into healing over hurry because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into love over judgment and let God handle the results, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into peace over pressure until it becomes who you are, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into progress over perfection and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into progress over perfection especially when no one is watching, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into progress over perfection every ordinary day, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into purpose over popularity and your peace will deepen, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into service over status one small step at a time, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Lean into truth over trends and joy will have room to grow, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let consistency over intensity until it becomes who you are, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let discipline over drama every ordinary day, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let faith over fear and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let faith over fear every ordinary day, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let growth over comfort and the next step will become clear, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let light over limits especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let meaning over metrics and watch your life change, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let patience over panic and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let patience over panic every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let peace over pressure and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let presence over distraction and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let presence over distraction and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let presence over distraction and your future will notice, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let presence over distraction until it becomes who you are, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let progress over perfection and your peace will deepen, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let purpose over popularity and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let purpose over popularity and your peace will deepen, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let service over status and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Let service over status and the rest will follow, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live courage over convenience one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live discipline over drama and let God handle the results, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live faith over fear and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live healing over hurry and joy will have room to grow, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live love over judgment and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live love over judgment until it becomes who you are, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live meaning over metrics and your future will notice, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live meaning over metrics one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live patience over panic and joy will have room to grow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live patience over panic and let God handle the results, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live presence over distraction especially when no one is watching, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live purpose over popularity and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Live purpose over popularity because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make courage over convenience and the path will appear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make gratitude over grumbling and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make healing over hurry and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make hope over worry and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make hope over worry and let grace do the heavy lifting, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make love over judgment every ordinary day, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make peace over pressure until it becomes who you are, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make presence over distraction and watch your life change, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make progress over perfection and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make progress over perfection until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make truth over trends and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Make truth over trends every ordinary day, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant consistency over intensity and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant courage over convenience especially when no one is watching, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant faith over fear one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant gratitude over grumbling and the rest will follow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant healing over hurry and let God handle the results, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant presence over distraction one small step at a time, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant progress over perfection and your future will notice, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant progress over perfection and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant purpose over popularity and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant purpose over popularity until it becomes who you are, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant service over status and the path will appear, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant service over status and your future will notice, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant today over someday and your peace will deepen, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Plant truth over trends especially when no one is watching, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice courage over convenience and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice discipline over drama and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice discipline over drama and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice discipline over drama and the next step will become clear, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice gratitude over grumbling and let God handle the results, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice gratitude over grumbling and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice healing over hurry and the path will appear, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice healing over hurry because small things compound, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice hope over worry and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice love over judgment and the path will appear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice patience over panic until it becomes who you are, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice service over status and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice service over status and your peace will deepen, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice today over someday and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Practice truth over trends one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect courage over convenience and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect discipline over drama because small things compound, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect healing over hurry especially when no one is watching, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect love over judgment and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect love over judgment because small things compound, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect meaning over metrics and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect patience over panic and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect presence over distraction and let God handle the results, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect progress over perfection and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect progress over perfection and the rest will follow, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect progress over perfection until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect purpose over popularity and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect purpose over popularity and your peace will deepen.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect service over status and the path will appear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Protect service over status every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember consistency over intensity and let grace do the heavy lifting, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember discipline over drama and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember discipline over drama and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember faith over fear and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember faith over fear especially when no one is watching, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember faith over fear one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember gratitude over grumbling and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember gratitude over grumbling and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember light over limits and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember light over limits and the path will appear, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember love over judgment because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember patience over panic every ordinary day, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember purpose over popularity especially when no one is watching, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember service over status and let grace do the heavy lifting, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Remember today over someday and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in faith over fear and let God handle the results, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in gratitude over grumbling until it becomes who you are, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in hope over worry especially when no one is watching, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in light over limits and the path will appear, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in meaning over metrics and your future will notice, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in progress over perfection and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in purpose over popularity and the path will appear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in purpose over popularity until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in service over status and the path will appear, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in today over someday every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Rest in today over someday until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward consistency over intensity and the next step will become clear, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward courage over convenience and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward courage over convenience and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward faith over fear and the path will appear, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward faith over fear and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward faith over fear because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward hope over worry and your future will notice, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward light over limits and let grace do the heavy lifting, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward light over limits until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward love over judgment until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward meaning over metrics and the rest will follow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward patience over panic and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward patience over panic and let grace do the heavy lifting, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward patience over panic every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward presence over distraction and joy will have room to grow, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward presence over distraction and let grace do the heavy lifting, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward progress over perfection and the path will appear, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward purpose over popularity until it becomes who you are, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward today over someday and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward truth over trends and joy will have room to grow, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Run toward truth over trends and the next step will become clear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start courage over convenience and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start courage over convenience one small step at a time, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start discipline over drama and the rest will follow, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start healing over hurry one small step at a time, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start hope over worry and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start hope over worry and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start light over limits and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start light over limits and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start love over judgment until it becomes who you are, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start peace over pressure and joy will have room to grow, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start peace over pressure and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start purpose over popularity and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start service over status one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start today over someday and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start today over someday and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Start truth over trends and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade consistency over intensity and let God handle the results, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade discipline over drama and joy will have room to grow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade faith over fear one small step at a time, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade gratitude over grumbling and let God handle the results, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade gratitude over grumbling until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade healing over hurry and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade healing over hurry and the rest will follow, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade hope over worry especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade love over judgment and your future will notice, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade meaning over metrics and let grace do the heavy lifting, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade presence over distraction and the path will appear, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade presence over distraction because small things compound, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade purpose over popularity and let God handle the results, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade purpose over popularity and let God handle the results, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade purpose over popularity and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade service over status and your future will notice, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade service over status especially when no one is watching, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade truth over trends and your peace will deepen, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trade truth over trends every ordinary day, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust consistency over intensity every ordinary day.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust courage over convenience because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust faith over fear and the next step will become clear, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust faith over fear and the rest will follow, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust light over limits especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust meaning over metrics every ordinary day, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust peace over pressure and the path will appear, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust peace over pressure until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust presence over distraction especially when no one is watching.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Trust progress over perfection especially when no one is watching, with quiet confidence.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk consistency over intensity every ordinary day, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk courage over convenience because small things compound, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk faith over fear and your peace will deepen, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk gratitude over grumbling one small step at a time, daily.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk healing over hurry because small things compound, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk light over limits one small step at a time, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk love over judgment and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk patience over panic because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk presence over distraction and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk purpose over popularity and joy will have room to grow.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk today over someday one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Walk truth over trends because small things compound, with courage.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write consistency over intensity and your future will notice, with joy.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write courage over convenience and your future will notice.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write discipline over drama and let grace do the heavy lifting.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write discipline over drama because small things compound.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write growth over comfort until it becomes who you are, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write healing over hurry and let God handle the results, this morning.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write healing over hurry and the next step will become clear, with humility.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write healing over hurry and watch your life change.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write hope over worry and the path will appear.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write patience over panic until it becomes who you are.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write peace over pressure one small step at a time.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write presence over distraction and let God handle the results.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write service over status every ordinary day, right now.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Write service over status one small step at a time, today.",
+      "author": "Anonymous"
+    },
+    {
+      "text": "Be strong and of a good courage.",
+      "author": "Joshua 1:9 (KJV)"
+    },
+    {
+      "text": "Let all that you do be done with charity.",
+      "author": "1 Corinthians 16:14 (KJV)"
+    },
+    {
+      "text": "Ask, and it shall be given you; seek, and ye shall find.",
+      "author": "Matthew 7:7 (KJV)"
+    },
+    {
+      "text": "If ye have faith as a grain of mustard seed, nothing shall be impossible unto you.",
+      "author": "Matthew 17:20 (KJV)"
+    },
+    {
+      "text": "Men are, that they might have joy.",
+      "author": "2 Nephi 2:25 (Book of Mormon)"
+    },
+    {
+      "text": "To every thing there is a season.",
+      "author": "Ecclesiastes 3:1 (KJV)"
+    },
+    {
+      "text": "A soft answer turneth away wrath.",
+      "author": "Proverbs 15:1 (KJV)"
+    },
+    {
+      "text": "Charity suffereth long, and is kind.",
+      "author": "1 Corinthians 13:4 (KJV)"
+    },
+    {
+      "text": "Bear ye one anotherâs burdens.",
+      "author": "Galatians 6:2 (KJV)"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I sow small seeds and trust the harvest.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I let go of what I cannot control.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I give what I want to receive.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I nourish what I want to grow.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am allowed to be a work in progress.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I sow small seeds and trust the harvest.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I let go of what I cannot control.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I give what I want to receive.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I nourish what I want to grow.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am allowed to be a work in progress.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I sow small seeds and trust the harvest.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I let go of what I cannot control.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I give what I want to receive.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I nourish what I want to grow.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am allowed to be a work in progress.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I sow small seeds and trust the harvest.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I let go of what I cannot control.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I give what I want to receive.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I nourish what I want to grow.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am allowed to be a work in progress.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I sow small seeds and trust the harvest.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I let go of what I cannot control.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I give what I want to receive.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I nourish what I want to grow.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am allowed to be a work in progress.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am guided, grounded, and growing.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I move one honest step at a time.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I breathe in peace and breathe out hurry.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I choose faith over fear today.",
+      "author": "Affirmation"
+    },
+    {
+      "text": "I am becoming who I was made to be.",
+      "author": "Affirmation"
+    },
+    {
+        [
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+              "author": "Winston Churchill"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "You are the calm after your own storm.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Peace is the proof that your heart remembers love.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Healing begins where judgment ends.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "The harder the battle, the sweeter the victory.",
+              "author": "Les Brown"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Forgiveness doesn’t erase pain—it releases its grip.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "The Spirit itself beareth witness with our spirit, that we are the children of God.",
+              "author": "Bible, Romans 8:16"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "The best way to predict your future is to create it.",
+              "author": "Abraham Lincoln"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+              "author": "Bible, Proverbs 3:5"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Every sunrise is proof that endings are just disguised beginnings.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "Your smile can change the atmosphere of a room.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "After stillness, after the fire, comes the whisper of peace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "The only limit to our realization of tomorrow is our doubts of today.",
+              "author": "Franklin D. Roosevelt"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Don’t watch the clock; do what it does. Keep going.",
+              "author": "Sam Levenson"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Stillness isn’t the absence of movement; it’s the presence of trust.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "Kindness never echoes into emptiness—it always returns in light.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Do what you can, with what you have, where you are.",
+              "author": "Theodore Roosevelt"
+            },
+            {
+              "text": "We must learn to live together as brothers or perish together as fools.",
+              "author": "Martin Luther King Jr."
+            },
+            {
+              "text": "You were not made to break—you were made to bend toward grace.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "Light cleaves unto light; truth unto truth.",
+              "author": "Doctrine and Covenants 88:40"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "When something is important enough, you do it even if the odds are not in your favor.",
+              "author": "Elon Musk"
+            },
+            {
+              "text": "When you climb a mountain, do not forget He made it for you to see His glory.",
+              "author": "Book of Mormon, Alma 30:44 (paraphrased)"
+            },
+            {
+              "text": "In quiet moments, the Spirit speaks the loudest.",
+              "author": "LovingSmiles (inspired by 1 Kings 19:12)"
+            },
+            {
+              "text": "Let your light so shine before men, that they may see your good works.",
+              "author": "Bible, Matthew 5:16"
+            },
+            {
+              "text": "Hope is the quiet promise that tomorrow can bloom again.",
+              "author": "LovingSmiles"
+            },
+            {
+              "text": "Faith is the substance of things hoped for, the evidence of things not seen.",
+              "author": "Bible, Hebrews 11:1"
+            },
+            {
+              "text": "God does not ask for perfection, only a willing heart.",
+              "author": "Doctrine and Covenants 64:34 (paraphrased)"
+            },
+            {
+              "text": "Be still, and know that I am God.",
+              "author": "Bible, Psalm 46:10"
+            },
+            {
+              "text": "In the middle of difficulty lies opportunity.",
+              "author": "Albert Einstein"
+            },
+            {
+              "text": "It always seems impossible until it's done.",
+              "author": "Nelson Mandela"
+            },
+            {
+              "text": "When the fire fades, stillness remains — not as silence, but as the sound of peace remembering your name.",
+              "author": "LovingSmiles"
+            }
+          ]

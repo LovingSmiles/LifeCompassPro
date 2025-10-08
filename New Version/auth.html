@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LovingSmiles — Sign In</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body{background:#f7f8fb}
+  .auth-wrap{max-width:900px;margin:40px auto;display:grid;gap:16px;grid-template-columns:1fr}
+  @media(min-width:960px){.auth-wrap{grid-template-columns:1.1fr .9fr}}
+  .brand{font-weight:800}
+  .card h3{margin:.2rem 0}
+  .muted{color:#667}
+  .link{color:#2563eb;cursor:pointer}
+  .row{display:grid;gap:10px;grid-template-columns:1fr}
+  @media(min-width:640px){.row-2{grid-template-columns:1fr 1fr}}
+  .center{display:flex;align-items:center;gap:8px}
+  .btn{cursor:pointer}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap center" style="justify-content:space-between">
+    <div class="brand">Life Compass Pro — LovingSmiles</div>
+    <div><a class="link" href="aihelper.html">AI Helpers</a></div>
+  </div>
+</header>
+
+<main class="auth-wrap">
+  <!-- 🟢 PRICING / TRIAL -->
+  <section class="card" id="pricing">
+    <h3>Start Your Journey — Free or Promo Plan</h3>
+    <p class="muted">30-Day Free Trial or quick starter plans.</p>
+
+    <div class="row row-2">
+      <!-- 🟢 FREE TRIAL -->
+      <div class="card" style="border:2px solid #10b981">
+        <h4>🎁 30-Day Free Trial</h4>
+        <p class="muted">Full access for 30 days. You keep your data even if you cancel.</p>
+        <a class="btn btn-success" href="signup.html?plan=trial">Start Free Trial</a>
+        <small class="muted" id="trial_msg"></small>
+      </div>
+
+      <!-- 💸 $1 FOR 1 MONTH -->
+      <div class="card" style="border:2px solid #3b82f6">
+        <h4>💸 $1 for 1 Month</h4>
+        <p class="muted">Try premium features for a full month.</p>
+        <a class="btn btn-primary" href="signup.html?plan=promo_1_1">Select $1 / 1 mo</a>
+      </div>
+
+      <!-- 🔥 $2 FOR 5 MONTHS -->
+      <div class="card" style="border:2px solid #f59e0b">
+        <h4>🔥 $2 for 5 Months</h4>
+        <p class="muted">Best value starter option.</p>
+        <a class="btn btn-primary" href="signup.html?plan=promo_2_5">Select $2 / 5 mo</a>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:8px">
+      <small class="muted">You can always view your content even if your plan expires.</small>
+      <small class="muted" id="plan_status"></small>
+    </div>
+  </section>
+
+  <!-- 🟦 SIGN IN -->
+  <section class="card" id="signin">
+    <h3>Sign In</h3>
+    <div class="row">
+      <label>Email <input id="l_email" type="email" required></label>
+      <label>Password <input id="l_pw" type="password" required></label>
+      <div class="center">
+        <label class="center"><input id="l_show" type="checkbox"> Show password</label>
+        <label class="center"><input id="l_rem" type="checkbox"> Remember me</label>
+      </div>
+      <button type="button" id="btn_login" class="btn btn-success">Sign In</button>
+      <small class="muted">Forgot your password? <span id="link_forgot" class="link">Recover it</span></small>
+      <div id="l_status" class="muted"></div>
+    </div>
+  </section>
+
+  <!-- 🔶 FORGOT PASSWORD -->
+  <section class="card" id="forgot">
+    <h3>Forgot Password</h3>
+    <div class="row">
+      <label>Email <input id="f_email" type="email"></label>
+      <button type="button" id="btn_fq" class="btn btn-ghost">Show my security question</button>
+      <div id="fq_box" style="display:none">
+        <p id="fq_text" class="muted"></p>
+        <label>Answer <input id="fq_answer" type="password"></label>
+        <label>New password <input id="fq_new1" type="password"></label>
+        <label>Confirm new password <input id="fq_new2" type="password"></label>
+        <button type="button" id="btn_reset" class="btn btn-success">Set New Password</button>
+      </div>
+      <div id="f_status" class="muted"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap center" style="justify-content:center">
+  <p>© 2025 LovingSmiles • Privacy-first. Works offline. </p>
+</footer>
+
+<script>
+/*** Keys ***/
+const USERS_K = 'lc_users_v1';       // email -> user record (from signup.html)
+const SESS_K  = 'lc_session_v1';     // current session token
+const FAILS_K = 'lc_login_fails_v1'; // email -> count
+const LOCK_K  = 'lc_login_lock_v1';  // email -> until timestamp
+
+/*** Helpers ***/
+const $=s=>document.querySelector(s);
+const read=(k,fb)=>{try{return JSON.parse(localStorage.getItem(k))??fb}catch{return fb}};
+const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+const now=()=>Date.now();
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+/*** Hash (SHA-256) ***/
+async function hash(str){
+  const enc=new TextEncoder().encode(str);
+  const buf=await crypto.subtle.digest('SHA-256',enc);
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+/*** Quote-of-the-day pool (edit/add any time) ***/
+const LS_WELCOME_NAME = 'lc_welcome_name';
+const LS_QOD          = 'lc_daily_quote';
+const LS_QOD_DATE     = 'lc_daily_quote_date';
+const QUOTES = [
+  "Start where you are. Use what you have. Do what you can.",
+  "Small steps every day lead to big changes.",
+  "Your future is built by what you do today.",
+  "Progress, not perfection.",
+  "Discipline is choosing what you want most over what you want now.",
+  "You don’t have to be extreme—just consistent.",
+  "Win the morning, win the day.",
+  "Your direction is more important than your speed.",
+  "The secret of getting ahead is getting started.",
+  "Little by little, a little becomes a lot.",
+  "Today’s actions are tomorrow’s results.",
+  "Energy flows where attention goes.",
+  "The best time to plant a tree was 20 years ago. The second best time is now.",
+  "Courage is a habit—practice it.",
+  "You are one decision away from a different life."
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Show password
+  $('#l_show')?.addEventListener('change', e=>{
+    const pw=$('#l_pw'); if(pw) pw.type = e.target.checked ? 'text' : 'password';
+  });
+
+  // Login (with simple lockout + welcome + daily quote)
+  $('#btn_login')?.addEventListener('click', async ()=>{
+    const email = ($('#l_email')?.value||'').trim().toLowerCase();
+    const pw    = $('#l_pw')?.value||'';
+    const remember = $('#l_rem')?.checked || false;
+    const out = $('#l_status'); if(out) out.textContent='';
+
+    if(!email || !pw){ if(out) out.textContent='Enter your email and password.'; return; }
+
+    const locks=read(LOCK_K,{});
+    if(locks[email] && locks[email] > now()){
+      const secs=Math.ceil((locks[email]-now())/1000);
+      if(out) out.textContent='Locked for too many attempts. Try again in ~'+secs+'s.';
+      return;
+    }
+
+    const users=read(USERS_K,{});
+    const u=users[email];
+    if(!u){ if(out) out.textContent='No account found for that email.'; return; }
+
+    const ok = (await hash(pw))===u.pw;
+    if(!ok){
+      const fails=read(FAILS_K,{}); fails[email]=(fails[email]||0)+1; save(FAILS_K,fails);
+      if(out) out.textContent='Incorrect password.';
+      if(fails[email]>=5){ const L=read(LOCK_K,{}); L[email]=now()+3*60*1000; save(LOCK_K,L); if(out) out.textContent='Too many attempts. Locked for 3 minutes.'; }
+      return;
+    }
+
+    // Success → reset fails, save session
+    save(FAILS_K, Object.assign(read(FAILS_K,{}), {[email]:0}));
+    const token=Math.random().toString(36).slice(2)+'.'+Date.now();
+    const sess={email,token,ts:now(),remember};
+    if(remember) localStorage.setItem(SESS_K, JSON.stringify(sess));
+    else sessionStorage.setItem(SESS_K, JSON.stringify(sess));
+
+    // ---- Save welcome name ----
+    const firstName = (u.first || '').split(' ')[0] || 'Friend';
+    localStorage.setItem(LS_WELCOME_NAME, firstName);
+
+    // ---- Quote of the Day (new per user per day) ----
+    (function setDailyQuote(){
+      const d = new Date();
+      const dateKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+      let seed = 0;
+      (email + '|' + dateKey).split('').forEach(ch => seed = (seed*31 + ch.charCodeAt(0)) % 2147483647);
+      const idx = seed % QUOTES.length;
+      localStorage.setItem(LS_QOD, QUOTES[idx]);
+      localStorage.setItem(LS_QOD_DATE, dateKey);
+    })();
+
+    if(out) out.textContent='✅ Logged in. Redirecting…';
+    await sleep(400);
+    location.href='index.html';
+  });
+
+  // Forgot: jump to section
+  $('#link_forgot')?.addEventListener('click',()=>{
+    document.getElementById('forgot')?.scrollIntoView({behavior:'smooth'});
+  });
+
+  // Forgot: show question
+  $('#btn_fq')?.addEventListener('click',()=>{
+    const email = ($('#f_email')?.value||'').trim().toLowerCase();
+    const users=read(USERS_K,{});
+    const u=users[email];
+    if(!u){ $('#f_status').textContent='No account found.'; return; }
+    $('#fq_box').style.display='block';
+    $('#fq_text').textContent='Security question: '+(u.q1||'');
+    $('#f_status').textContent='';
+  });
+
+  // Forgot: reset password
+  $('#btn_reset')?.addEventListener('click', async ()=>{
+    const email = ($('#f_email')?.value||'').trim().toLowerCase();
+    const ans   = $('#fq_answer')?.value||'';
+    const n1    = $('#fq_new1')?.value||'';
+    const n2    = $('#fq_new2')?.value||'';
+    const out   = $('#f_status');
+    const users = read(USERS_K,{});
+    const u     = users[email]; if(!u){ if(out) out.textContent='No account.'; return; }
+
+    const aHash = await hash(ans);
+    if(aHash!==u.a1){ if(out) out.textContent='Answer incorrect.'; return; }
+    if(n1!==n2){ if(out) out.textContent='New passwords do not match.'; return; }
+    const weak = (n1.length<8) || !/[A-Z]/.test(n1) || !/[a-z]/.test(n1) || !/\d/.test(n1);
+    if(weak){ if(out) out.textContent='Choose a stronger new password (8+ chars with upper, lower, number).'; return; }
+
+    u.pw = await hash(n1); users[email]=u; save(USERS_K,users);
+    if(out) out.textContent='✅ Password updated. You can sign in now.';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOB Test</title>
+<style>
+  body{font:16px system-ui,Arial; padding:20px}
+  .card{border:1px solid #ddd; border-radius:8px; padding:16px; max-width:420px}
+  label{display:block; margin:10px 0}
+  /* overlay-killer just in case */
+  * { pointer-events:auto !important; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h3>Native date test</h3>
+  <label>Date of birth
+    <input id="d1" type="date" required style="padding:.5rem;">
+  </label>
+
+  <h3 style="margin-top:20px">Hybrid test</h3>
+  <label style="display:block; position:relative;">
+    <span>DOB</span>
+    <input id="t" type="text" inputmode="numeric" placeholder="MM/DD/YYYY" maxlength="10" style="padding:.5rem;">
+    <button id="btn" type="button">📅</button>
+    <input id="p" type="date" style="position:absolute; left:-9999px; top:-9999px; opacity:0; width:1px; height:1px;">
+    <input id="iso" type="hidden">
+  </label>
+  <pre id="out"></pre>
+</div>
+
+<script>
+function onlyD(s){return s.replace(/\D/g,'')}
+function toISO(mm,dd,yyyy){
+  const m=+mm,d=+dd,y=+yyyy;
+  if(y<1900||y>2100||m<1||m>12||d<1||d>31) return '';
+  const dt=new Date(`${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`);
+  if(isNaN(dt.getTime())) return '';
+  if(dt.getUTCFullYear()!==y||(dt.getUTCMonth()+1)!==m||dt.getUTCDate()!==d) return '';
+  return `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+}
+function isoToDisp(s){ if(!s) return ''; const [y,m,d]=s.split('-'); return `${m}/${d}/${y}` }
+
+const t=document.getElementById('t'), p=document.getElementById('p'), iso=document.getElementById('iso'), out=document.getElementById('out');
+function fmt(){
+  const raw=onlyD(t.value); let mm='',dd='',yy='';
+  if(raw.length>=2) mm=raw.slice(0,2);
+  if(raw.length>=4) dd=raw.slice(2,4);
+  if(raw.length>4)  yy=raw.slice(4,8);
+  t.value=[mm,dd,yy].filter(Boolean).join('/');
+  iso.value=(mm&&dd&&yy)?toISO(mm,dd,yy):'';
+  p.value=iso.value||'';
+  out.textContent=`ISO: ${iso.value}`;
+}
+t.addEventListener('input',fmt);
+t.addEventListener('blur',fmt);
+
+document.getElementById('btn').addEventListener('click',()=>{
+  const prev=p.style.cssText;
+  p.style.cssText='position:fixed;left:-9999px;top:0;opacity:0;';
+  try{ if(p.showPicker) p.showPicker(); else p.click(); }catch{ p.click(); }
+  setTimeout(()=>p.style.cssText=prev,300);
+});
+p.addEventListener('change',()=>{
+  iso.value=p.value||'';
+  t.value=isoToDisp(iso.value);
+  out.textContent=`ISO: ${iso.value}`;
+});
+</script>
+</body>
+</html>

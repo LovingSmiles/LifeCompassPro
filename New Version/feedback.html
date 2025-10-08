@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LovingSmiles — Feedback</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { background:#f8f9fb }
+  .wrap { max-width:1000px; margin:24px auto; padding:0 16px }
+  .grid { display:grid; gap:12px }
+  .g2 { grid-template-columns:1fr }
+  @media (min-width:760px){ .g2{ grid-template-columns:1fr 1fr } }
+  .muted{ color:#667 }
+  .pill{ display:inline-block; padding:.15rem .6rem; border-radius:999px; background:#eef }
+  .small{ font-size:.9rem }
+  .note{ background:#fff7ed; border:1px solid #fdba74; padding:10px; border-radius:8px }
+  textarea{ min-height:110px }
+  .inline{ display:flex; gap:10px; align-items:center; flex-wrap:wrap }
+  .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+  .badge{ display:inline-block; padding:.1rem .5rem; border:1px solid #ddd; border-radius:10px; background:#fff }
+  .actions{ display:flex; gap:10px; flex-wrap:wrap }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="brand">Life Compass Pro — Feedback</div>
+    <nav class="inline">
+      <a class="btn btn-ghost" href="index.html">🏠 Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap grid g2">
+  <!-- LEFT: Form -->
+  <section class="card">
+    <h2>Share Your Feedback</h2>
+    <p class="muted">Thank you! Your input helps us make LovingSmiles better for everyone.</p>
+
+    <div class="grid g2">
+      <label>First name <input id="fb_first" autocomplete="given-name" /></label>
+      <label>Last name <input id="fb_last" autocomplete="family-name" /></label>
+      <label style="grid-column:1/-1">Email (for follow-up) <input id="fb_email" type="email" placeholder="you@example.com" autocomplete="email" /></label>
+    </div>
+
+    <hr class="mt-1 mb-1">
+
+    <div class="grid g2">
+      <label>Overall satisfaction
+        <select id="fb_sat">
+          <option value="">Choose…</option>
+          <option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
+          <option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
+        </select>
+      </label>
+      <label>Would you recommend us? (NPS 0–10)
+        <input id="fb_nps" type="number" min="0" max="10" placeholder="0–10" />
+      </label>
+      <label>How easy was it to use? (SUS-style 1–5)
+        <input id="fb_sus" type="number" min="1" max="5" placeholder="1–5" />
+      </label>
+      <label>Plan you’re on
+        <select id="fb_plan">
+          <option value="">Unknown</option>
+          <option>Free Trial</option><option>$1 / 1 mo</option><option>$2 / 5 mo</option>
+          <option>$20 / mo</option><option>$120 / yr</option>
+        </select>
+      </label>
+    </div>
+
+    <hr class="mt-1 mb-1">
+
+    <div class="grid g2">
+      <label>What were you trying to do?
+        <textarea id="fb_goal" placeholder="e.g., Add a goal, upload a photo, plan my week…"></textarea>
+      </label>
+      <label>What happened? (Actual)
+        <textarea id="fb_actual" placeholder="Describe what you saw"></textarea>
+      </label>
+      <label>What did you expect? (Expected)
+        <textarea id="fb_expected" placeholder="Describe what you expected to see"></textarea>
+      </label>
+      <label>Steps to reproduce (if a bug)
+        <textarea id="fb_steps" placeholder="1) Go to… 2) Click… 3) Error appears…"></textarea>
+      </label>
+      <label>How severe is this?
+        <select id="fb_severity">
+          <option value="">Choose…</option>
+          <option>Suggestion</option><option>Minor</option><option>Major</option><option>Blocking</option>
+        </select>
+      </label>
+      <label>How often does it happen?
+        <select id="fb_freq">
+          <option value="">Choose…</option>
+          <option>Once</option><option>Sometimes</option><option>Often</option><option>Always</option>
+        </select>
+      </label>
+    </div>
+
+    <label>Feature ideas or improvements
+      <textarea id="fb_ideas" placeholder="Dream big! What would make this amazing for you?"></textarea>
+    </label>
+
+    <div class="grid g2">
+      <label>Allow screenshots / files (optional)
+        <input id="fb_files" type="file" multiple />
+      </label>
+      <label>Allow follow-up by email?
+        <select id="fb_follow">
+          <option>Yes</option><option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="note mt-1 small">
+      <b>Privacy:</b> By default, we store this feedback locally in your browser and nothing leaves your device.
+      You can download it or send it via email below. You control what you share.
+    </div>
+
+    <div class="actions mt-2">
+      <button class="btn btn-success" id="fb_save">Save locally</button>
+      <button class="btn btn-primary" id="fb_download">Download JSON</button>
+      <button class="btn" id="fb_copy">Copy JSON</button>
+      <button class="btn btn-ghost" id="fb_email">Open Email</button>
+      <span id="fb_status" class="muted"></span>
+    </div>
+  </section>
+
+  <!-- RIGHT: Smart Diagnostics -->
+  <section class="card">
+    <h2>Diagnostics (auto)</h2>
+    <p class="muted small">Collected to help us debug issues. You can disable any item before sharing.</p>
+
+    <div class="grid">
+      <div class="inline"><input type="checkbox" class="diag" data-key="ua" checked /> <span>Browser (UA): <span id="ua" class="mono badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="lang" checked /> <span>Language: <span id="lang" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="tz" checked /> <span>Timezone: <span id="tz" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="screen" checked /> <span>Screen: <span id="screen" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="vp" checked /> <span>Viewport: <span id="vp" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="mem" checked /> <span>Device Memory: <span id="mem" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="cpu" checked /> <span>CPU Threads: <span id="cpu" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="net" checked /> <span>Network: <span id="net" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="battery" checked /> <span>Battery: <span id="battery" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="online" checked /> <span>Online: <span id="online" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="perf" checked /> <span>Perf (ms to interactive): <span id="perf" class="badge"></span></span></div>
+      <div class="inline"><input type="checkbox" class="diag" data-key="session" checked /> <span>Session Id: <span id="sid" class="badge mono"></span></span></div>
+    </div>
+  </section>
+
+  <!-- PREVIEW -->
+  <section class="card" style="grid-column:1/-1">
+    <h2>Preview</h2>
+    <pre id="preview" class="mono" style="white-space:pre-wrap;background:#fff;padding:10px;border:1px solid #eee;border-radius:8px;max-height:340px;overflow:auto"></pre>
+  </section>
+</main>
+
+<footer class="wrap muted small" style="text-align:center">
+  © 2025 LovingSmiles — Thank you for helping us improve.
+</footer>
+
+<script>
+const LS_KEY = 'lc_feedback_v1';
+
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const download = (name, text, type='application/json')=>{
+  const blob = new Blob([text], {type}); const a=document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),500);
+};
+const sid = crypto?.randomUUID?.() || Math.random().toString(36).slice(2);
+let diag = { sid };
+
+async function getBattery() {
+  try { const b = await navigator.getBattery(); return `${Math.round(b.level*100)}% ${b.charging?'(charging)':''}`; }
+  catch { return 'n/a'; }
+}
+function getNet(){
+  const c = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if(!c) return 'n/a';
+  const bits = [];
+  if(c.effectiveType) bits.push(c.effectiveType);
+  if(c.downlink) bits.push(c.downlink+'Mbps');
+  if(c.rtt) bits.push(c.rtt+'ms');
+  return bits.join(' • ') || 'n/a';
+}
+function timeToInteractive(){
+  const t=performance.timing;
+  if(!t || !t.domInteractive) return 'n/a';
+  return (t.domInteractive - t.navigationStart)+' ms';
+}
+function collectDiagnostics(){
+  diag.ua = navigator.userAgent;
+  diag.lang = navigator.language;
+  diag.tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  diag.screen = `${screen.width}x${screen.height} @${window.devicePixelRatio||1}x`;
+  diag.vp = `${window.innerWidth}x${window.innerHeight}`;
+  diag.mem = (navigator.deviceMemory? navigator.deviceMemory+' GB' : 'n/a');
+  diag.cpu = (navigator.hardwareConcurrency? navigator.hardwareConcurrency+' threads' : 'n/a');
+  diag.net = getNet();
+  diag.online = navigator.onLine ? 'online' : 'offline';
+  diag.perf = timeToInteractive();
+}
+async function enrichAsync(){
+  diag.battery = await getBattery();
+  updateDiagUI();
+  render();
+}
+function updateDiagUI(){
+  $('#ua').textContent=diag.ua;
+  $('#lang').textContent=diag.lang;
+  $('#tz').textContent=diag.tz;
+  $('#screen').textContent=diag.screen;
+  $('#vp').textContent=diag.vp;
+  $('#mem').textContent=diag.mem;
+  $('#cpu').textContent=diag.cpu;
+  $('#net').textContent=diag.net;
+  $('#battery').textContent=diag.battery||'n/a';
+  $('#online').textContent=diag.online;
+  $('#perf').textContent=diag.perf;
+  $('#sid').textContent=diag.sid;
+}
+function selectedDiagnostics(){
+  const allowed = {}; $$('.diag').forEach(ch=>{
+    if(ch.checked){ const k=ch.dataset.key; allowed[k]=diag[k]; }
+  });
+  return allowed;
+}
+function readFiles(){
+  const files = $('#fb_files').files || [];
+  // We store filenames only; attachments can be emailed manually.
+  return Array.from(files).map(f=>({name:f.name, type:f.type, size:f.size}));
+}
+function buildPayload(){
+  return {
+    meta: { createdAt: new Date().toISOString(), sessionId: diag.sid, page: location.href },
+    contact: {
+      first: $('#fb_first').value.trim(),
+      last: $('#fb_last').value.trim(),
+      email: $('#fb_email').value.trim()
+    },
+    ratings: {
+      satisfaction: $('#fb_sat').value,
+      nps: $('#fb_nps').value,
+      ease: $('#fb_sus').value,
+      plan: $('#fb_plan').value
+    },
+    report: {
+      goal: $('#fb_goal').value.trim(),
+      expected: $('#fb_expected').value.trim(),
+      actual: $('#fb_actual').value.trim(),
+      steps: $('#fb_steps').value.trim(),
+      severity: $('#fb_severity').value,
+      frequency: $('#fb_freq').value,
+      ideas: $('#fb_ideas').value.trim(),
+      followUp: $('#fb_follow').value
+    },
+    attachments: readFiles(),
+    diagnostics: selectedDiagnostics()
+  };
+}
+function render(){
+  const data = buildPayload();
+  $('#preview').textContent = JSON.stringify(data, null, 2);
+}
+function saveLocal(){
+  const list = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+  list.push(buildPayload());
+  localStorage.setItem(LS_KEY, JSON.stringify(list));
+  $('#fb_status').textContent = '✅ Saved locally ('+list.length+' total).';
+}
+function copyJSON(){
+  const txt = $('#preview').textContent;
+  navigator.clipboard?.writeText(txt).then(()=>$('#fb_status').textContent='✅ Copied to clipboard').catch(()=>{});
+}
+function emailJSON(){
+  const to = 'feedback@lovingsmiles.example'; // change later
+  const subject = encodeURIComponent('LovingSmiles Feedback');
+  const body = encodeURIComponent($('#preview').textContent.slice(0,6000)); // mailto limit
+  location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+}
+
+// Hooks
+['input','change'].forEach(evt=>{
+  document.addEventListener(evt, (e)=>{
+    if(e.target.closest('main')) render();
+  });
+});
+$('#fb_save').addEventListener('click', saveLocal);
+$('#fb_download').addEventListener('click', ()=>download(`feedback-${diag.sid}.json`, $('#preview').textContent));
+$('#fb_copy').addEventListener('click', copyJSON);
+$('#fb_email').addEventListener('click', emailJSON);
+$$('.diag').forEach(ch=>ch.addEventListener('change', render));
+
+// Init
+collectDiagnostics();
+updateDiagUI();
+enrichAsync();
+render();
+</script>
+</body>
+</html>

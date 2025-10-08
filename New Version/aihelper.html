@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Life Compass AI Helpers — by LovingSmiles</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;background:#f8f9fb;color:#222;display:flex;flex-direction:column;height:100vh}
+header{background:#222;color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+header button{background:#444;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer}
+header button:hover{background:#666}
+main{flex:1;display:grid;grid-template-columns:250px 1fr;max-height:calc(100vh - 60px)}
+aside{border-right:1px solid #ccc;background:#fff;overflow:auto}
+aside h3{margin:10px 20px}
+aside ul{list-style:none;padding:0;margin:0}
+aside li{padding:10px 20px;cursor:pointer}
+aside li:hover,aside li.active{background:#eef}
+.chat-area{display:flex;flex-direction:column;overflow:hidden}
+.messages{flex:1;overflow-y:auto;padding:20px}
+.message{margin-bottom:12px;max-width:700px}
+.message.user{text-align:right}
+.message p{display:inline-block;padding:10px 14px;border-radius:12px;margin:0;line-height:1.5}
+.message.user p{background:#0078ff;color:#fff;border-bottom-right-radius:0}
+.message.ai p{background:#e9ecf3;border-bottom-left-radius:0}
+form{display:flex;gap:10px;padding:10px 20px;border-top:1px solid #ccc;background:#fff}
+form input{flex:1;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:1rem}
+form button{background:#0078ff;color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer}
+form button:hover{background:#005fd1}
+footer{text-align:center;padding:8px 0;font-size:.9rem;background:#fff;border-top:1px solid #ccc}
+#settingsPanel{position:fixed;top:70px;right:20px;background:#fff;border:1px solid #ccc;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.2);padding:20px;width:280px;display:none;z-index:999}
+#settingsPanel h4{margin-top:0}
+#settingsPanel input{width:100%;padding:8px;margin-bottom:10px;border-radius:6px;border:1px solid #ccc}
+#settingsPanel button{width:100%;background:#0078ff;color:#fff;border:none;padding:8px;border-radius:6px;cursor:pointer}
+#settingsPanel button:hover{background:#005fd1}
+</style>
+</head>
+<body>
+<header>
+  <h2>💬 AI Helpers by LovingSmiles</h2>
+  <div>
+    <a href="index.html" style="color:#fff;text-decoration:none;margin-right:10px">🏠 Home</a>
+    <a href="#" id="logoutBtn">Logout</a>
+    <button id="settingsBtn">⚙️ Settings</button>
+  </div>
+</header>
+
+<div id="settingsPanel">
+  <h4>🔑 AI Settings</h4>
+  <p style="font-size:.9rem;color:#555;">Your API key is stored locally on this device — never uploaded.</p>
+  <input id="apiKeyInput" type="password" placeholder="Enter your OpenAI API key" />
+  <button id="saveKeyBtn">Save Key</button>
+</div>
+
+<main>
+  <aside>
+    <h3>Helper Modes</h3>
+    <ul id="helperList">
+      <li class="active" data-role="coach">🧭 Life Coach</li>
+      <li data-role="finance">💰 Financial Mentor</li>
+      <li data-role="study">📚 Study Partner</li>
+      <li data-role="writer">✍️ Writer Assistant</li>
+      <li data-role="spiritual">🙏 Spiritual Guide</li>
+    </ul>
+  </aside>
+
+  <section class="chat-area">
+    <div id="messages" class="messages"></div>
+    <form id="chatForm">
+      <input id="chatInput" placeholder="Ask your AI Helper something…" autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>© 2025 LovingSmiles • Your AI Helper Hub</footer>
+
+<script>
+const LS_KEY = 'aihelper_chat_history_v1';
+const LS_API = 'aihelper_api_key';
+let OPENAI_API_KEY = localStorage.getItem(LS_API)||"";
+const chatBox=document.getElementById('messages');
+const input=document.getElementById('chatInput');
+const form=document.getElementById('chatForm');
+const helpers=document.getElementById('helperList');
+let activeRole='coach';
+
+/* ---------- Settings Panel ---------- */
+const panel=document.getElementById('settingsPanel');
+document.getElementById('settingsBtn').addEventListener('click',()=>{
+  panel.style.display=(panel.style.display==='none'||!panel.style.display)?'block':'none';
+  document.getElementById('apiKeyInput').value=OPENAI_API_KEY;
+});
+document.getElementById('saveKeyBtn').addEventListener('click',()=>{
+  OPENAI_API_KEY=document.getElementById('apiKeyInput').value.trim();
+  localStorage.setItem(LS_API,OPENAI_API_KEY);
+  alert('API key saved locally.');
+  panel.style.display='none';
+});
+
+/* ---------- Message Helpers ---------- */
+function appendMsg(sender,text){
+  const div=document.createElement('div');
+  div.className='message '+sender;
+  div.innerHTML='<p>'+text.replace(/</g,'&lt;')+'</p>';
+  chatBox.appendChild(div);
+  chatBox.scrollTop=chatBox.scrollHeight;
+}
+function saveHistory(){
+  const msgs=[...chatBox.querySelectorAll('.message')].map(m=>({
+    who:m.classList.contains('user')?'user':'ai',text:m.textContent
+  }));
+  localStorage.setItem(LS_KEY,JSON.stringify({role:activeRole,msgs}));
+}
+function loadHistory(){
+  const hist=JSON.parse(localStorage.getItem(LS_KEY)||'{}');
+  if(hist.role)activeRole=hist.role;
+  if(hist.msgs)hist.msgs.forEach(m=>appendMsg(m.who,m.text));
+}
+
+/* ---------- AI Placeholder / Fetch ---------- */
+function fakeAIReply(role){
+  const quotes={
+    coach:["Progress over perfection.","Focus on what you can control."],
+    finance:["Pay yourself first.","Track your wins weekly."],
+    study:["Study in focused sprints.","Teach to retain knowledge."],
+    writer:["Describe feelings, not just facts.","Write first, edit later."],
+    spiritual:["Pause, breathe, give thanks.","Your peace matters."]
+  };
+  const arr=quotes[role]||["Reflect and grow."];
+  return arr[Math.floor(Math.random()*arr.length)]+" ("+role+" mode)";
+}
+async function fetchAI(prompt,role){
+  if(!OPENAI_API_KEY){return fakeAIReply(role);}
+  try{
+    const res=await fetch("https://api.openai.com/v1/chat/completions",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Authorization":"Bearer "+OPENAI_API_KEY
+      },
+      body:JSON.stringify({
+        model:"gpt-3.5-turbo",
+        messages:[
+          {role:"system",content:`You are a helpful ${role} assistant for Life Compass.`},
+          {role:"user",content:prompt}
+        ]
+      })
+    });
+    const data=await res.json();
+    return data.choices?.[0]?.message?.content?.trim()||"[No reply]";
+  }catch(e){console.error(e);return "⚠️ Network error.";}
+}
+
+/* ---------- Events ---------- */
+helpers.addEventListener('click',e=>{
+  if(e.target.tagName!=='LI')return;
+  helpers.querySelectorAll('li').forEach(li=>li.classList.remove('active'));
+  e.target.classList.add('active');
+  activeRole=e.target.dataset.role;
+  appendMsg('ai',`Switched to ${e.target.textContent} mode.`);
+  saveHistory();
+});
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const prompt=input.value.trim(); if(!prompt)return;
+  appendMsg('user',prompt); input.value='';
+  const reply=await fetchAI(prompt,activeRole);
+  appendMsg('ai',reply);
+  saveHistory();
+});
+
+/* ---------- INIT ---------- */
+loadHistory();
+appendMsg('ai','Welcome to your AI Helper Lab 🧠 Type a message to begin.');
+// Logout: clears local/session storage and redirects to login
+document.getElementById('logoutBtn')?.addEventListener('click', () => {
+  localStorage.removeItem('lc_session_v1');
+  sessionStorage.removeItem('lc_session_v1');
+  alert('✅ You have been logged out.');
+  window.location.href = 'auth.html'; // make sure this points to the right path
+});
+</script>
+</body>
+</html>

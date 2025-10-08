@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Create Account — LovingSmiles</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body{background:#f7f8fb}
+  .wrap{max-width:900px;margin:32px auto;padding:0 16px}
+  .badge{display:inline-block;padding:.2rem .6rem;border:1px solid #ccc;border-radius:999px;font-size:.8rem}
+  .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:#eef}
+  .row{display:grid;gap:10px;grid-template-columns:1fr}
+  @media(min-width:700px){.row-2{grid-template-columns:1fr 1fr}}
+  .pw-meter{height:6px;border-radius:6px;background:#e5e7eb;overflow:hidden}
+  .pw-meter>div{height:100%;width:0;transition:width .25s}
+  .success{background:#16a34a}.warn{background:#f59e0b}.danger{background:#ef4444}
+  header{display:flex;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h2>Create Account</h2>
+    <a class="badge" href="auth.html">Have an account? Sign in</a>
+  </header>
+
+  <section class="card">
+    <h3>Selected Plan</h3>
+    <p id="plan_label" class="pill">Detecting plan…</p>
+    <small id="plan_note" class="muted"></small>
+  </section>
+
+  <section class="card" id="yourInfo">
+    <h3>Your Info</h3>
+
+    <div class="row row-2">
+      <label>First name <input id="r_first" required></label>
+      <label>Last name <input id="r_last" required></label>
+
+      <!-- Email -->
+<label>Email
+    <input id="r_email" type="email" placeholder="you@example.com" required>
+  </label>
+  
+ <!-- Date of birth (type, calendar, or dropdowns) -->
+<label class="dob-field" style="display:block; position:relative;">
+    <span style="display:block; margin-bottom:6px;">Date of birth</span>
+  
+    <!-- Text input (type 01021990) -->
+    <input
+      id="r_dob_text"
+      type="text"
+      inputmode="numeric"
+      autocomplete="bday"
+      placeholder="MM/DD/YYYY (type 01021990)"
+      maxlength="10"
+      required
+      style="position:relative; z-index:1; width:220px; padding:.5rem;">
+  
+    <!-- Calendar button with transparent date input over it -->
+    <span style="position:relative; display:inline-block; margin-left:8px;">
+      <button
+        type="button"
+        class="btn btn-ghost small"
+        aria-label="Pick date"
+        style="position:relative; z-index:1; pointer-events:none;">
+        📅 Pick date
+      </button>
+      <input
+        id="r_dob_picker"
+        type="date"
+        min="1900-01-01"
+        max="2100-12-31"
+        aria-hidden="false"
+        style="position:absolute; inset:0; opacity:0; cursor:pointer;
+               width:100%; height:100%; border:0; padding:0; margin:0; z-index:2;">
+    </span>
+  
+    <!-- Quick selects (fast scroll to year/month) -->
+    <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+      <select id="dob_month" aria-label="Month" style="padding:.4rem;">
+        <option value="">Month</option>
+        <option value="01">January</option><option value="02">February</option><option value="03">March</option>
+        <option value="04">April</option><option value="05">May</option><option value="06">June</option>
+        <option value="07">July</option><option value="08">August</option><option value="09">September</option>
+        <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+      </select>
+  
+      <select id="dob_day" aria-label="Day" style="padding:.4rem;">
+        <option value="">Day</option>
+        <!-- days will be populated based on month/year -->
+      </select>
+  
+      <select id="dob_year" aria-label="Year" style="padding:.4rem; min-width:110px;">
+        <option value="">Year</option>
+        <!-- years populated 1900..current+5 -->
+      </select>
+    </div>
+  
+    <!-- Hidden ISO value actually saved -->
+    <input id="r_dob_iso" type="hidden" required>
+  
+    <small class="muted" style="display:block; margin-top:6px;">
+      Type, pick the calendar, or use the dropdowns — everything stays in sync. We store a valid YYYY-MM-DD.
+    </small>
+  </label>
+
+      <!-- City / Region -->
+      <label>City or Region
+        <input id="r_place" placeholder="e.g., Boise" autocomplete="address-level2">
+      </label>
+
+      <!-- Country + State (US only) -->
+      <label>Country
+        <input id="r_country" list="countryList" placeholder="Start typing…" autocomplete="country-name" required>
+        <datalist id="countryList"></datalist>
+      </label>
+
+      <label id="state_wrap" style="display:none">
+        State
+        <select id="r_state">
+          <option value="">Select state</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+          <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+          <option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option>
+          <option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option>
+          <option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option>
+          <option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option>
+          <option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option>
+          <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option>
+          <option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option>
+          <option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+          <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option>
+          <option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option>
+          <option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Puerto Rico</option>
+        </select>
+      </label>
+
+      <label>Password <input id="r_pw1" type="password" required></label>
+      <label>Confirm password <input id="r_pw2" type="password" required></label>
+
+      <div class="row" style="grid-column:1/-1">
+        <div class="pw-meter"><div id="pwbar"></div></div>
+        <small id="pwmsg" class="muted"></small>
+      </div>
+
+      <label>Security question
+        <select id="r_q1">
+          <option>Where were you born?</option>
+          <option>What was your first pet’s name?</option>
+          <option>What is your favorite teacher’s last name?</option>
+          <option>What city did you get married in?</option>
+          <option>Custom (type below)</option>
+        </select>
+      </label>
+      <label>Custom question (optional) <input id="r_q1c" placeholder="If you chose Custom"></label>
+      <label>Answer <input id="r_a1" type="password" placeholder="Answer (case-sensitive)" required></label>
+
+      <label style="grid-column:1/-1">
+        <input id="r_terms" type="checkbox"> I agree to the local-only terms for now (no cloud).
+      </label>
+      <label style="grid-column:1/-1">
+        <input id="r_show" type="checkbox"> Show passwords
+      </label>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+      <button id="btn_register" class="btn btn-success">Create Account</button>
+      <div id="r_status" class="muted"></div>
+    </div>
+  </section>
+
+  <footer class="muted" style="text-align:center;margin-top:16px">
+    © 2025 LovingSmiles — Privacy-first. Works offline.
+  </footer>
+</div>
+
+<script>
+/** Storage Keys **/
+const USERS_K='lc_users_v1';
+const SESS_K ='lc_session_v1';
+const PLAN_K ='lc_plan_v1';
+
+/** Helpers **/
+const $=s=>document.querySelector(s);
+const read=(k,fb)=>{ try{return JSON.parse(localStorage.getItem(k)) ?? fb} catch{return fb} };
+const save=(k,v)=>localStorage.setItem(k, JSON.stringify(v));
+
+/** Hash (SHA-256) **/
+async function hash(str){
+  const enc=new TextEncoder().encode(str);
+  const buf=await crypto.subtle.digest('SHA-256',enc);
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+/** Password strength **/
+function pwStrength(pw){
+  let s=0;
+  if(pw.length>=8) s++;
+  if(/[A-Z]/.test(pw)) s++;
+  if(/[a-z]/.test(pw)) s++;
+  if(/\d/.test(pw)) s++;
+  if(/[^A-Za-z0-9]/.test(pw)) s++;
+  return s;
+}
+function renderMeter(pw){
+  const bar=$('#pwbar'), msg=$('#pwmsg');
+  const s=pwStrength(pw);
+  const w=[0,20,40,60,80,100][s]; bar.style.width=w+'%';
+  bar.className=''; bar.classList.add(s>=4?'success':s>=3?'warn':'danger');
+  msg.textContent=(s>=4?'Strong':'Add numbers, case, symbols for strength');
+}
+$('#r_pw1').addEventListener('input',e=>renderMeter(e.target.value));
+$('#r_show').addEventListener('change',e=>{
+  const t=e.target.checked?'text':'password';
+  $('#r_pw1').type=t; $('#r_pw2').type=t; $('#r_a1').type=t;
+});
+
+/** Plan detection **/
+function getParam(name){
+  const u=new URL(location.href);
+  return u.searchParams.get(name)||'';
+}
+function setPlanFromParam(){
+  const code=getParam('plan');
+  let label='(none selected)', note='';
+  const now=Date.now();
+
+  if(code==='trial'){
+    const ends=now+30*24*60*60*1000;
+    save(PLAN_K,{type:'trial',label:'30-Day Free Trial',startedAt:now,endsAt:ends});
+    label='🎁 30-Day Free Trial'; note='Ends '+new Date(ends).toLocaleDateString();
+  }else if(code==='promo_1_1'){
+    const ends=new Date(); ends.setMonth(ends.getMonth()+1);
+    save(PLAN_K,{type:'promo',code,label:'$1 for 1 month',startedAt:now,endsAt:ends.getTime()});
+    label='💸 $1 for 1 month'; note='Expires '+ends.toLocaleDateString();
+  }else if(code==='promo_2_5'){
+    const ends=new Date(); ends.setMonth(ends.getMonth()+5);
+    save(PLAN_K,{type:'promo',code,label:'$2 for 5 months',startedAt:now,endsAt:ends.getTime()});
+    label='🔥 $2 for 5 months'; note='Expires '+ends.toLocaleDateString();
+  }else{
+    const p=read(PLAN_K,null);
+    if(p){ label=p.label||p.type; note=p.endsAt?('Ends '+new Date(p.endsAt).toLocaleDateString()):''; }
+  }
+
+  const pl = document.getElementById('plan_label');
+  const pn = document.getElementById('plan_note');
+  if(pl) pl.textContent=label;
+  if(pn) pn.textContent=note;
+}
+
+/** Register **/
+$('#btn_register').addEventListener('click',async()=>{
+  const first=$('#r_first').value.trim();
+  const last=$('#r_last').value.trim();
+  const email=$('#r_email').value.trim().toLowerCase();
+  const dob=document.getElementById('r_dob_iso').value; // YYYY-MM-DD
+  const place=$('#r_place').value.trim();
+  const country=$('#r_country').value.trim();
+  const state=document.getElementById('r_state')?.value || '';
+  const pw1=$('#r_pw1').value, pw2=$('#r_pw2').value;
+  const q=($('#r_q1').value==='Custom (type below)')?($('#r_q1c').value.trim()||'Custom Question'):$('#r_q1').value;
+  const a=$('#r_a1').value;
+  const terms=$('#r_terms').checked;
+  const out=$('#r_status');
+
+  if(!terms){out.textContent='Please accept the terms.';return;}
+  if(!first||!last||!email||!dob||!pw1||!a){out.textContent='Fill all required fields.';return;}
+  if(pw1!==pw2){out.textContent='Passwords do not match.';return;}
+  if(pwStrength(pw1)<3){out.textContent='Use a stronger password.';return;}
+
+  const users=read(USERS_K,{});
+  if(users[email]){out.textContent='An account with this email already exists.';return;}
+
+  const rec={first,last,email,dob,place,country,state,pw:await hash(pw1),q1:q,a1:await hash(a),created:Date.now()};
+  users[email]=rec; save(USERS_K,users);
+
+  const token=Math.random().toString(36).slice(2)+'.'+Date.now();
+  const sess={email,token,ts:Date.now(),remember:true};
+  localStorage.setItem(SESS_K,JSON.stringify(sess));
+
+  out.textContent='✅ Account created! Redirecting…';
+  setTimeout(()=>location.href='index.html',400);
+});
+</script>
+
+<!-- ===== DOB: typing + calendar pick (single, correct block) ===== -->
+<script>
+    // DOB: text + calendar + month/day/year selects (fully synced)
+    (function(){
+      const txt  = document.getElementById('r_dob_text');
+      const iso  = document.getElementById('r_dob_iso');
+      const pic  = document.getElementById('r_dob_picker');
+      const sm   = document.getElementById('dob_month');
+      const sd   = document.getElementById('dob_day');
+      const sy   = document.getElementById('dob_year');
+      if(!txt||!iso||!pic||!sm||!sd||!sy) return;
+    
+      // Build year dropdown: 1900 .. currentYear+5 (easy scroll)
+      (function buildYears(){
+        const nowY = new Date().getFullYear();
+        for(let y=nowY+5; y>=1900; y--){
+          const opt=document.createElement('option'); opt.value=String(y); opt.textContent=String(y);
+          sy.appendChild(opt);
+        }
+      })();
+    
+      // Utils
+      const onlyD = s => (s||'').replace(/\D/g,'');
+      const pad2  = n => String(n).padStart(2,'0');
+      function daysIn(m,y){ return new Date(y, m, 0).getDate(); } // m=1..12
+      function toISO(mm,dd,yyyy){
+        if(!mm||!dd||!yyyy) return '';
+        const m=+mm, d=+dd, y=+yyyy;
+        if(y<1900||y>2100||m<1||m>12||d<1||d>31) return '';
+        const dt=new Date(`${y}-${pad2(m)}-${pad2(d)}`);
+        if(isNaN(dt.getTime())) return '';
+        if(dt.getUTCFullYear()!==y || (dt.getUTCMonth()+1)!==m || dt.getUTCDate()!==d) return '';
+        return `${y}-${pad2(m)}-${pad2(d)}`;
+      }
+      function isoToDisplay(s){ if(!s) return ''; const [y,m,d]=s.split('-'); return `${m}/${d}/${y}`; }
+    
+      // Populate day options when month/year changes
+      function repopulateDays(){
+        const y=sy.value, m=sm.value;
+        const count=(y&&m)?daysIn(+m, +y):31;
+        const sel=sd.value;
+        sd.innerHTML='<option value="">Day</option>';
+        for(let i=1;i<=count;i++){
+          const v=pad2(i);
+          const o=document.createElement('option'); o.value=v; o.textContent=String(i);
+          sd.appendChild(o);
+        }
+        // retain previous day if still valid
+        if(sel && +sel<=count) sd.value=sel; else if(+sel>count) sd.value='';
+      }
+    
+      // ---- Sync helpers (update all views from ISO) ----
+      function setFromISO(s){
+        iso.value = s || '';
+        txt.value = isoToDisplay(s);
+        pic.value = s || '';
+        if(!s){ sm.value=''; sd.value=''; sy.value=''; repopulateDays(); return; }
+        const [y,m,d]=s.split('-');
+        sy.value=y; sm.value=m; repopulateDays(); sd.value=d;
+      }
+    
+      // ---- Text typing (01021990) -> ISO ----
+      function fromText(){
+        const raw=onlyD(txt.value);
+        let mm='',dd='',yy='';
+        if(raw.length>=2) mm=raw.slice(0,2);
+        if(raw.length>=4) dd=raw.slice(2,4);
+        if(raw.length>4)  yy=raw.slice(4,8);
+        txt.value=[mm,dd,yy].filter(Boolean).join('/');
+        const val=toISO(mm,dd,yy);
+        setFromISO(val);
+        txt.setCustomValidity(val?'':'Please enter a valid date (MM/DD/YYYY).');
+      }
+    
+      // ---- Calendar pick -> ISO ----
+      function fromPicker(){
+        setFromISO(pic.value || '');
+        txt.setCustomValidity(iso.value?'':'Please enter a valid date (MM/DD/YYYY).');
+      }
+    
+      // ---- Dropdowns -> ISO ----
+      function fromSelects(){
+        const y=sy.value, m=sm.value, d=sd.value;
+        repopulateDays(); // ensure days fit month/year
+        const val=toISO(m,d,y);
+        setFromISO(val);
+        txt.setCustomValidity(val?'':'Please complete Month/Day/Year.');
+      }
+    
+      // Events
+      txt.addEventListener('input', fromText);
+      txt.addEventListener('blur',  fromText);
+      pic.addEventListener('change', fromPicker);
+      sm.addEventListener('change', fromSelects);
+      sd.addEventListener('change', fromSelects);
+      sy.addEventListener('change', fromSelects);
+    
+      // If the picker has a default value, sync UI once
+      setFromISO(pic.value || '');
+    })();
+    </script>
+
+<!-- ===== Country list + US State toggle ===== -->
+<script>
+(function(){
+  const countries=[ "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria",
+  "Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan",
+  "Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde",
+  "Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (Congo-Brazzaville)",
+  "Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czechia","Democratic Republic of the Congo","Denmark","Djibouti","Dominica",
+  "Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji",
+  "Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala",
+  "Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran",
+  "Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati",
+  "Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania",
+  "Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius",
+  "Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia",
+  "Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway",
+  "Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal",
+  "Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe",
+  "Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia",
+  "South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria",
+  "Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
+  "Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu",
+  "Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe" ];
+  const dl=document.getElementById('countryList');
+  if(dl && !dl.children.length){
+    countries.forEach(c=>{ const o=document.createElement('option'); o.value=c; dl.appendChild(o); });
+  }
+
+  const country = document.getElementById('r_country');
+  const stateWrap = document.getElementById('state_wrap');
+  function looksLikeUS(val){
+    const v=(val||'').trim().toLowerCase();
+    return v==='united states' || v==='united states of america' || v==='usa' || v==='us' || v==='u.s.';
+  }
+  function toggleState(){
+    if(!country || !stateWrap) return;
+    if(looksLikeUS(country.value)){ stateWrap.style.display=''; }
+    else { stateWrap.style.display='none'; const s=document.getElementById('r_state'); if(s) s.value=''; }
+  }
+  if(country){
+    country.addEventListener('input', toggleState);
+    country.addEventListener('change', toggleState);
+    toggleState();
+  }
+})();
+</script>
+
+</body>
+</html>
