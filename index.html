@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Compass Pro | by LovingSmiles</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="mood-switcher.js" defer></script>
+</head>
+<body>
+    <div id="site-header" data-include="header.html"></div>
+    <div id="welcome_bar" class="card" style="display:none; margin:16px 0;">
+        <h3 id="welcome_msg" style="margin:.2rem 0"></h3>
+        <p id="welcome_quote" class="muted" style="margin:.2rem 0"></p>
+      </div>
+    <script>
+        // 🔒 Safe Login Guard with friendly message + debug
+        (function () {
+          try {
+            const SESS_K = 'lc_session_v1';
+            const MSG_K  = 'lc_redirect_msg';
+        
+            // Do NOT guard the auth page itself
+            if (location.pathname.endsWith('auth.html')) return;
+        
+            // Allow manual bypass for testing: add ?noredirect
+            if (location.search.includes('noredirect')) {
+              console.warn('[Guard] Login check bypassed via ?noredirect');
+              return;
+            }
+        
+            // Read session (sessionStorage first, then localStorage)
+            let raw = sessionStorage.getItem(SESS_K) || localStorage.getItem(SESS_K);
+            if (!raw) {
+              console.warn('[Guard] No session found -> redirecting to auth.html');
+              localStorage.setItem(MSG_K, 'Your session expired or you need to log in first.');
+              // If auth.html is missing, don't blank the page—just stop here
+              if (document.querySelector('a[href="auth.html"]') || true) {
+                location.href = 'auth.html';
+              } else {
+                console.error('[Guard] auth.html not found; staying on page.');
+              }
+              return;
+            }
+        
+            let sess = null;
+            try { sess = JSON.parse(raw); } catch { sess = null; }
+        
+            if (!sess || !sess.token) {
+              console.warn('[Guard] Bad session format -> redirecting');
+              localStorage.setItem(MSG_K, 'Your session expired or you need to log in first.');
+              location.href = 'auth.html';
+              return;
+            }
+        
+            // Optional timeout (24h)
+            const ONE_DAY = 24 * 60 * 60 * 1000;
+            if (!sess.ts || Date.now() - sess.ts > ONE_DAY) {
+              console.warn('[Guard] Session old/expired -> redirecting');
+              localStorage.removeItem(SESS_K);
+              sessionStorage.removeItem(SESS_K);
+              localStorage.setItem(MSG_K, 'Your session has expired after 24 hours. Please sign in again.');
+              location.href = 'auth.html';
+            }
+          } catch (e) {
+            console.error('[Guard] Error in guard:', e);
+            // Fail open: do nothing so page still renders
+          }
+        })();
+        </script>  
+  <!-- Background word-cloud -->
+  <div class="bg">
+    <div class="bg-words">
+      <span class="bg-word" style="--scale:1;--dur:25s;top:20%;left:15%;">Growth</span>
+      <span class="bg-word" style="--scale:1.2;--dur:35s;top:60%;left:45%;">Faith</span>
+      <span class="bg-word" style="--scale:0.8;--dur:30s;top:40%;left:80%;">Stillness</span>
+      <span class="bg-word" style="--scale:1.4;--dur:28s;top:75%;left:25%;">Vision</span>
+      <span class="bg-word" style="--scale:1;--dur:32s;top:10%;left:70%;">Purpose</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">Life Compass Pro</div>
+
+      <link rel="stylesheet" href="lcp-nav.css">
+      <script src="lcp-nav.js" defer></script>
+      
+    </div>
+  </header>
+
+  <!-- ==================== ADDED: QUOTE OF THE DAY ==================== -->
+  <section id="daily-quote" class="wrap" style="margin:24px auto; max-width:900px;">
+    <div id="quoteBox" class="card" style="text-align:center; padding:18px;">
+      <!-- Filled by inspiration.js -->
+      <div class="muted">Loading your Quote of the Day…</div>
+    </div>
+
+    <!-- Optional: let users contribute a quote -->
+    <form id="addQuoteForm" class="card" style="margin-top:12px; padding:16px;">
+      <h3 style="margin-top:0;">💬 Share an Inspiring Quote</h3>
+      <div class="form-grid cols-2">
+        <label>Quote
+          <input id="quoteText" type="text" placeholder="Your uplifting message…" required />
+        </label>
+        <label>Author (optional)
+          <input id="quoteAuthor" type="text" placeholder="Your name or Anonymous" />
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Add Quote</button>
+    </form>
+  </section>
+  <!-- ================== END ADDED: QUOTE OF THE DAY ================== -->
+
+  <!-- Home Section -->
+  <section id="home" class="section active wrap">
+    <div class="card center stack-md">
+      <h1>Life Compass: A Way To Understand Yourself Better</h1>
+      <p class="muted">
+        A digital sanctuary for Spiritual, Physical, Emotional, Mental, and Financial Growth.
+        Crafted by <b>LovingSmiles</b>, inspired by Stillness, Resilience, and Purpose.
+      </p>
+      <button class="btn btn-primary">Start My Journey</button>
+    </div>
+  </section>
+
+  <!-- Vision Board Section -->
+  <section id="vision" class="section wrap">
+    <h2>🌿 Vision Board</h2>
+    <p>Capture dreams, goals, and blessings. Upload images and ideas that inspire your journey.</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+      <img src="https://via.placeholder.com/300x300" class="thumb" alt="Vision item">
+    </div>
+    <div class="space"></div>
+    <button class="btn btn-primary">Upload New Vision</button>
+  </section>
+
+  <!-- Journal Section -->
+  <section id="journal" class="section wrap">
+    <h2>🖋️ Journal & Reflection</h2>
+    <p>Track your stillness, gratitude, and lessons. Tell your life story day by day.</p>
+    <form class="form-grid cols-2">
+      <label>Title</label>
+      <input type="text" placeholder="Today's Reflection..." />
+      <label>Entry</label>
+      <textarea rows="6" placeholder="Write your thoughts..."></textarea>
+    </form>
+    <button class="btn btn-success mt-2">Save Entry</button>
+  </section>
+
+  <!-- Growth Areas Section -->
+  <section id="growth" class="section wrap">
+    <h2>💎 Growth Areas</h2>
+    <p>Select a category to focus your improvement.</p>
+    <div class="tabs">
+      <div class="tab active">Spiritual</div>
+      <div class="tab">Physical</div>
+      <div class="tab">Emotional</div>
+      <div class="tab">Mental</div>
+      <div class="tab">Financial</div>
+    </div>
+    <div class="card mt-2">
+      <h3>Spiritual Growth</h3>
+      <p class="muted">Reflect daily, set temple goals, and reconnect with peace.</p>
+      <button class="btn btn-primary">Add New Goal</button>
+    </div>
+  </section>
+
+<!-- =============== HOBBIES SECTION =============== -->
+<section id="hobbies" class="section wrap">
+    <h2>🎨 Hobbies</h2>
+    <p class="muted">Log practice sessions and what you learned. Add a photo if you want.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Hobby <input id="hb_name" placeholder="e.g., Guitar, Drawing"></label>
+        <label>Minutes <input id="hb_min" type="number" min="5" step="5" value="30"></label>
+        <label>Notes <input id="hb_notes" placeholder="What did you practice?"></label>
+        <label>Photo <input id="hb_file" type="file" accept="image/*"></label>
+      </div>
+      <button class="btn btn-success mt-2" id="hb_add">Add Session</button>
+    </div>
+  
+    <div class="card">
+      <h3>My Sessions</h3>
+      <div id="hb_list" class="stack-md"></div>
+    </div>
+  </section>
+  
+  <!-- =============== SPIRITUAL SECTION =============== -->
+  <section id="spiritual" class="section wrap">
+    <h2>🙏 Spiritual</h2>
+    <p class="muted">Gratitude, verse/quote, and a prayer list you can check off.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Grateful for <input id="sp_g" placeholder="e.g., breath, family, sunrise"></label>
+        <label>Verse / Quote <input id="sp_q" placeholder="Type one you love…"></label>
+        <label>Prayer request <input id="sp_p" placeholder="Who/what to pray for?"></label>
+      </div>
+      <button class="btn btn-success mt-2" id="sp_add">Add</button>
+    </div>
+  
+    <div class="card">
+      <h3>Today’s Spiritual Notes</h3>
+      <div id="sp_list" class="stack-md"></div>
+    </div>
+  </section>
+  
+  <!-- =============== PHYSICAL SECTION =============== -->
+  <section id="physical" class="section wrap">
+    <h2>🏃 Physical</h2>
+    <p class="muted">Quick workout log + optional weight check-in.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Workout <input id="p_name" placeholder="e.g., Walk, Pushups"></label>
+        <label>Minutes <input id="p_min" type="number" min="1" value="20"></label>
+        <label>Notes <input id="p_notes" placeholder="Route, reps, etc."></label>
+        <label>Weight (optional) <input id="p_w" type="number" step="0.1"></label>
+      </div>
+      <button class="btn btn-success mt-2" id="p_add">Add Workout</button>
+    </div>
+  
+    <div class="card">
+      <h3>History</h3>
+      <div id="p_list" class="stack-md"></div>
+    </div>
+  </section>
+  
+  <!-- =============== MENTAL SECTION =============== -->
+  <section id="mental" class="section wrap">
+    <h2>🧠 Mental</h2>
+    <p class="muted">Mood + CBT thought record to practice balanced thinking.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Mood
+          <select id="m_mood">
+            <option>😊 Calm</option><option>🙂 Okay</option><option>😐 Neutral</option>
+            <option>😟 Anxious</option><option>😞 Low</option>
+          </select>
+        </label>
+        <label>Trigger <input id="m_trigger" placeholder="What happened?"></label>
+        <label>Automatic thought <textarea id="m_auto" rows="3"></textarea></label>
+        <label>Balanced thought <textarea id="m_bal" rows="3"></textarea></label>
+      </div>
+      <button class="btn btn-success mt-2" id="m_add">Save Check-in</button>
+    </div>
+  
+    <div class="card">
+      <h3>History</h3>
+      <div id="m_list" class="stack-md"></div>
+    </div>
+  </section>
+  
+  <!-- =============== FINANCIAL SECTION =============== -->
+  <section id="financial" class="section wrap">
+    <h2>💵 Financial (Quick)</h2>
+    <p class="muted">Fast monthly snapshot. For the full planner use the separate <a href="financial.html" target="_blank" rel="noopener">Financial page</a>.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Monthly Income <input id="f_inc" type="number" step="0.01" placeholder="e.g., 4200"></label>
+        <label>Total Monthly Budget <input id="f_bud" type="number" step="0.01" placeholder="e.g., 3200"></label>
+        <label>Savings Rate (%) <input id="f_rate" type="number" min="0" max="100" value="10"></label>
+      </div>
+      <button class="btn btn-success mt-2" id="f_save">Save Snapshot</button>
+    </div>
+  
+    <div class="card">
+      <h3>Key Numbers</h3>
+      <div class="grid2">
+        <div><div class="muted">Monthly Net</div><div id="f_net" class="bold mono">$0.00</div></div>
+        <div><div class="muted">Year-1 Savings</div><div id="f_year" class="bold mono">$0.00</div></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- =============== CALENDAR SECTION =============== -->
+  <section id="calendar" class="section wrap">
+    <h2>📅 Calendar</h2>
+    <p class="muted">Click a date, add notes. Everything saves locally.</p>
+  
+    <div class="card">
+      <div class="form-grid cols-2">
+        <label>Year <input id="c_year" type="number" min="2025" max="2125"></label>
+        <label>Month
+          <select id="c_month">
+            <option value="0">January</option><option value="1">February</option><option value="2">March</option>
+            <option value="3">April</option><option value="4">May</option><option value="5">June</option>
+            <option value="6">July</option><option value="7">August</option><option value="8">September</option>
+            <option value="9">October</option><option value="10">November</option><option value="11">December</option>
+          </select>
+        </label>
+      </div>
+      <button class="btn btn-primary mt-2" id="c_build">Show</button>
+    </div>
+  
+    <div class="card">
+      <h3 id="cal_title">Month</h3>
+      <div id="cal_grid" class="calendar"></div>
+    </div>
+  
+    <div class="card">
+      <h3>Selected Date</h3>
+      <p id="sel_label" class="muted">None</p>
+      <label>Notes<textarea id="c_notes" rows="5" placeholder="Plans / to-dos…"></textarea></label>
+      <button class="btn btn-success mt-2" id="c_save">Save Notes</button>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section wrap">
+    <h2>💰 Plans & Pricing</h2>
+    <p class="muted">Start free. Unlock your growth when ready.</p>
+    <div class="pricing">
+      <article class="plan">
+        <h3>Free Trial</h3>
+        <p class="price">$0 / 30 days</p>
+        <ul class="features">
+          <li>Full access for 30 days</li>
+          <li>Keep your saved data even after trial</li>
+        </ul>
+        <div class="cta"><button class="btn btn-primary">Start Trial</button></div>
+      </article>
+      <article class="plan">
+        <h3>Monthly</h3>
+        <p class="price">$20 / mo</p>
+        <ul class="features">
+          <li>Unlimited journaling</li>
+          <li>Vision board uploads</li>
+          <li>AI coaching suggestions</li>
+        </ul>
+        <div class="cta"><button class="btn btn-success">Subscribe</button></div>
+      </article>
+      <article class="plan">
+        <h3>Yearly</h3>
+        <p class="price">$120 / yr</p>
+        <ul class="features">
+          <li>2 months free</li>
+          <li>Priority support</li>
+        </ul>
+        <div class="cta"><button class="btn btn-primary">Upgrade</button></div>
+      </article>
+      <article class="plan">
+        <h3>Lifetime</h3>
+        <p class="price">$250</p>
+        <ul class="features">
+          <li>Full access for life</li>
+          <li>All future updates</li>
+          <li>Legacy recognition</li>
+        </ul>
+        <div class="cta"><button class="btn btn-warning">Join Forever</button></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section wrap">
+    <h2>📨 Contact & Support</h2>
+    <p>Questions or feedback? Reach out to the Life Compass Pro team.</p>
+    <form class="form-grid cols-2 max-600">
+      <label>First Name</label><input type="text" />
+      <label>Last Name</label><input type="text" />
+      <label>Email</label><input type="email" />
+      <label>Message</label><textarea rows="5"></textarea>
+      <button class="btn btn-primary mt-2">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Guided by Faith. Strengthened by Fire. Moved by Stillness.</p>
+    <p>&copy; 2025 Life Compass Pro — by LovingSmiles</p>
+  </footer>
+
+  <!-- ✅ Load the Quote logic -->
+  <script src="inspiration.js"></script>
+
+<script>
+    /* tiny helpers */
+    const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+    const save=(k,v)=>localStorage.setItem(k, JSON.stringify(v));
+    const read=(k,fb)=>{try{return JSON.parse(localStorage.getItem(k))??fb}catch{return fb}};
+    const uid=()=>crypto?.randomUUID?.()||Math.random().toString(36).slice(2);
+    const fmt=n=>'$'+(Number(n)||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+    
+    /* ---------- HOBBIES ---------- */
+    const HBK='ix_hobbies';
+    async function fileToDataURL(f){return await new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.onerror=()=>rej(fr.error);fr.readAsDataURL(f);});}
+    function renderHB(){
+      const host=$('#hb_list'); if(!host) return;
+      host.innerHTML='';
+      const list=read(HBK,[]).slice().reverse();
+      if(!list.length){ host.innerHTML='<div class="muted">No sessions yet.</div>'; return; }
+      list.forEach(s=>{
+        const d=document.createElement('div'); d.className='card';
+        d.innerHTML=`<strong>${s.name}</strong> <span class="badge">${s.min} min • ${new Date(s.ts).toLocaleString()}</span>
+          ${s.notes?`<p class="muted">${s.notes.replace(/</g,'&lt;')}</p>`:''}
+          ${s.photo?`<img src="${s.photo}" style="max-width:260px;border:1px solid var(--line);border-radius:10px">`:''}
+          <div class="stack-sm"><button class="btn btn-ghost" data-del="${s.id}">Delete</button></div>`;
+        host.appendChild(d);
+      });
+      host.addEventListener('click',ev=>{
+        const id=ev.target.getAttribute('data-del'); if(!id) return;
+        save(HBK, read(HBK,[]).filter(x=>x.id!==id)); renderHB();
+      },{once:true});
+    }
+    $('#hb_add')?.addEventListener('click', async ()=>{
+      const name=$('#hb_name').value.trim(), min=parseInt($('#hb_min').value||'0',10);
+      const notes=$('#hb_notes').value.trim(); const file=$('#hb_file').files[0];
+      if(!name||!min){ alert('Enter hobby and minutes'); return; }
+      let photo=''; if(file) photo=await fileToDataURL(file);
+      const list=read(HBK,[]); list.push({id:uid(),ts:Date.now(),name,min,notes,photo}); save(HBK,list);
+      ['hb_name','hb_min','hb_notes','hb_file'].forEach(i=>$('#'+i).value='');
+      renderHB();
+    });
+    
+    /* ---------- SPIRITUAL ---------- */
+    const SPK='ix_spiritual';
+    function renderSP(){
+      const host=$('#sp_list'); if(!host) return;
+      host.innerHTML='';
+      const list=read(SPK,[]).slice().reverse();
+      if(!list.length){ host.innerHTML='<div class="muted">Nothing yet—add gratitude or a prayer.</div>'; return; }
+      list.forEach(x=>{
+        const d=document.createElement('div'); d.className='card';
+        d.innerHTML=`<strong>${new Date(x.ts).toLocaleString()}</strong>
+          ${x.g?`<p>Grateful: <b>${x.g.replace(/</g,'&lt;')}</b></p>`:''}
+          ${x.q?`<p>Verse/Quote: “${x.q.replace(/</g,'&lt;')}”</p>`:''}
+          ${x.p?`<p>Prayer: ${x.p.replace(/</g,'&lt;')}</p>`:''}
+          <button class="btn btn-ghost" data-del="${x.id}">Delete</button>`;
+        host.appendChild(d);
+      });
+      host.addEventListener('click',ev=>{
+        const id=ev.target.getAttribute('data-del'); if(!id) return;
+        save(SPK, read(SPK,[]).filter(x=>x.id!==id)); renderSP();
+      },{once:true});
+    }
+    $('#sp_add')?.addEventListener('click', ()=>{
+      const g=$('#sp_g').value.trim(), q=$('#sp_q').value.trim(), p=$('#sp_p').value.trim();
+      if(!g && !q && !p){ alert('Add at least one field'); return; }
+      const list=read(SPK,[]); list.push({id:uid(),ts:Date.now(),g,q,p}); save(SPK,list);
+      ['sp_g','sp_q','sp_p'].forEach(i=>$('#'+i).value=''); renderSP();
+    });
+    
+    /* ---------- PHYSICAL ---------- */
+    const PHK='ix_physical';
+    function renderPH(){
+      const host=$('#p_list'); if(!host) return;
+      host.innerHTML='';
+      const list=read(PHK,[]).slice().reverse();
+      if(!list.length){ host.innerHTML='<div class="muted">No workouts yet.</div>'; return; }
+      list.forEach(w=>{
+        const d=document.createElement('div'); d.className='card';
+        d.innerHTML=`<strong>${w.name}</strong> <span class="badge">${w.min} min • ${new Date(w.ts).toLocaleString()}</span>
+          ${w.w?`<span class="badge">Weight: ${w.w}</span>`:''}
+          ${w.notes?`<p class="muted">${w.notes.replace(/</g,'&lt;')}</p>`:''}
+          <button class="btn btn-ghost" data-del="${w.id}">Delete</button>`;
+        host.appendChild(d);
+      });
+      host.addEventListener('click',ev=>{
+        const id=ev.target.getAttribute('data-del'); if(!id) return;
+        save(PHK, read(PHK,[]).filter(x=>x.id!==id)); renderPH();
+      },{once:true});
+    }
+    $('#p_add')?.addEventListener('click', ()=>{
+      const name=$('#p_name').value.trim(), min=parseInt($('#p_min').value||'0',10);
+      const notes=$('#p_notes').value.trim(), w=parseFloat($('#p_w').value||'');
+      if(!name||!min){ alert('Add workout and minutes'); return; }
+      const list=read(PHK,[]); list.push({id:uid(),ts:Date.now(),name,min,notes,w:isNaN(w)?null:w}); save(PHK,list);
+      ['p_name','p_min','p_notes','p_w'].forEach(i=>$('#'+i).value=''); renderPH();
+    });
+    
+    /* ---------- MENTAL ---------- */
+    const MEK='ix_mental';
+    function renderME(){
+      const host=$('#m_list'); if(!host) return;
+      host.innerHTML='';
+      const list=read(MEK,[]).slice().reverse();
+      if(!list.length){ host.innerHTML='<div class="muted">No check-ins yet.</div>'; return; }
+      list.forEach(e=>{
+        const d=document.createElement('div'); d.className='card';
+        d.innerHTML=`<strong>${new Date(e.ts).toLocaleString()}</strong> <span class="badge">${e.mood}</span>
+          ${e.trigger?`<p><b>Trigger:</b> ${e.trigger.replace(/</g,'&lt;')}</p>`:''}
+          ${e.auto?`<p><b>Automatic:</b> ${e.auto.replace(/</g,'&lt;')}</p>`:''}
+          ${e.bal?`<p><b>Balanced:</b> ${e.bal.replace(/</g,'&lt;')}</p>`:''}
+          <button class="btn btn-ghost" data-del="${e.id}">Delete</button>`;
+        host.appendChild(d);
+      });
+      host.addEventListener('click',ev=>{
+        const id=ev.target.getAttribute('data-del'); if(!id) return;
+        save(MEK, read(MEK,[]).filter(x=>x.id!==id)); renderME();
+      },{once:true});
+    }
+    $('#m_add')?.addEventListener('click', ()=>{
+      const e={id:uid(),ts:Date.now(),mood:$('#m_mood').value,trigger:$('#m_trigger').value.trim(),auto:$('#m_auto').value.trim(),bal:$('#m_bal').value.trim()};
+      const list=read(MEK,[]); list.push(e); save(MEK,list);
+      ['m_trigger','m_auto','m_bal'].forEach(i=>$('#'+i).value=''); renderME();
+    });
+    
+    /* ---------- FINANCIAL (quick) ---------- */
+    const FQK='ix_financial_quick';
+    function refreshQuickFin(){
+      const elNet=$('#f_net'), elYr=$('#f_year'); if(!elNet||!elYr) return;
+      const s=read(FQK,{inc:0,bud:0,rate:10});
+      const inc=+s.inc||0, bud=+s.bud||0, rate=(+s.rate||0)/100;
+      const net=inc-bud;
+      const year=(inc*rate + Math.max(0,net))*12;
+      elNet.textContent=fmt(net);
+      elYr.textContent = fmt(year);
+    }
+    $('#f_save')?.addEventListener('click', ()=>{
+      const inc=$('#f_inc').value, bud=$('#f_bud').value, rate=$('#f_rate').value;
+      save(FQK,{inc, bud, rate}); refreshQuickFin();
+    });
+    
+    /* ---------- CALENDAR ---------- */
+    const CK='ix_calendar_local';
+    let C_SELECTED='';
+    function buildCal(){
+      const y=parseInt($('#c_year').value,10), m=parseInt($('#c_month').value,10);
+      const grid=$('#cal_grid'), title=$('#cal_title'); if(!grid) return;
+      title.textContent=new Date(y,m,1).toLocaleString(undefined,{month:'long', year:'numeric'});
+      grid.innerHTML='';
+      const names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      names.forEach(n=>{const h=document.createElement('div'); h.className='cal-head'; h.textContent=n; grid.appendChild(h);});
+      const first=new Date(y,m,1).getDay(), days=new Date(y,m+1,0).getDate();
+      for(let i=0;i<first;i++){ grid.appendChild(document.createElement('div')); }
+      const data=read(CK,{});
+      for(let d=1; d<=days; d++){
+        const key=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        const cell=document.createElement('div'); cell.className='cal-cell'; cell.tabIndex=0; cell.dataset.key=key;
+        const has=data[key] && data[key].trim();
+        cell.innerHTML=`<div><strong>${d}</strong></div>${has?'<div class="badge">note</div>':''}`;
+        cell.addEventListener('click',()=>selectDate(key,cell));
+        grid.appendChild(cell);
+      }
+    }
+    function selectDate(key, cell){
+      $$('.cal-cell').forEach(c=>c.classList.remove('selected'));
+      cell.classList.add('selected'); C_SELECTED=key;
+      $('#sel_label').textContent=key;
+      const data=read(CK,{}); $('#c_notes').value=data[key]||'';
+    }
+    $('#c_save')?.addEventListener('click', ()=>{
+      if(!C_SELECTED){ alert('Pick a date'); return; }
+      const data=read(CK,{}); data[C_SELECTED]=$('#c_notes').value; save(CK,data); buildCal();
+    });
+    $('#c_build')?.addEventListener('click', buildCal);
+    
+    /* ---------- INIT (only runs if elements exist) ---------- */
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // default calendar to current month
+      if($('#c_year') && $('#c_month')){
+        const now=new Date(); $('#c_year').value=Math.max(2025, Math.min(2125, now.getFullYear())); $('#c_month').value=now.getMonth();
+        buildCal();
+      }
+      renderHB(); renderSP(); renderPH(); renderME(); refreshQuickFin();
+    });
+    // --- AI Settings Integration ---
+(function(){
+  const LS_API = 'aihelper_api_key';
+  let OPENAI_API_KEY = localStorage.getItem(LS_API) || "";
+
+  // Create floating settings button (⚙️)
+  const btn = document.createElement('button');
+  btn.textContent = '⚙️';
+  Object.assign(btn.style, {
+    position:'fixed', bottom:'20px', right:'20px',
+    width:'48px', height:'48px',
+    background:'#444', color:'#fff', border:'none',
+    borderRadius:'50%', cursor:'pointer', fontSize:'20px',
+    boxShadow:'0 2px 6px rgba(0,0,0,0.3)', zIndex:9999
+  });
+  document.body.appendChild(btn);
+
+  // Create settings panel
+  const panel = document.createElement('div');
+  panel.id = 'settingsPanel';
+  panel.innerHTML = `
+    <h4>🔑 AI Settings</h4>
+    <p style="font-size:.9rem;color:#555;">Your API key is stored locally — never uploaded.</p>
+    <input id="apiKeyInput" type="password" placeholder="Enter your OpenAI API key"
+      style="width:100%;padding:8px;margin-bottom:10px;border-radius:6px;border:1px solid #ccc;">
+    <button id="saveKeyBtn" style="width:100%;background:#0078ff;color:#fff;border:none;padding:8px;border-radius:6px;cursor:pointer;">
+      Save Key
+    </button>`;
+  Object.assign(panel.style,{
+    position:'fixed',top:'80px',right:'20px',background:'#fff',
+    border:'1px solid #ccc',borderRadius:'10px',boxShadow:'0 2px 8px rgba(0,0,0,0.2)',
+    padding:'20px',width:'280px',display:'none',zIndex:9998
+  });
+  document.body.appendChild(panel);
+
+  // Toggle panel visibility
+  btn.addEventListener('click',()=>{
+    panel.style.display=(panel.style.display==='none'||!panel.style.display)?'block':'none';
+    document.getElementById('apiKeyInput').value = OPENAI_API_KEY;
+  });
+
+  // Save API key
+  panel.querySelector('#saveKeyBtn').addEventListener('click',()=>{
+    const key = document.getElementById('apiKeyInput').value.trim();
+    localStorage.setItem(LS_API, key);
+    OPENAI_API_KEY = key;
+    alert('✅ API key saved locally.');
+    panel.style.display='none';
+  });
+})();
+// Logout: clears local/session storage and redirects to login
+document.getElementById('logoutBtn')?.addEventListener('click', () => {
+  localStorage.removeItem('lc_session_v1');
+  sessionStorage.removeItem('lc_session_v1');
+  alert('✅ You have been logged out.');
+  window.location.href = 'auth.html'; // make sure this points to the right path
+});
+    </script>
+    <script>
+        (function(){
+          const name  = localStorage.getItem('lc_welcome_name') || 'Friend';
+          const quote = localStorage.getItem('lc_daily_quote') || '';
+          const date  = localStorage.getItem('lc_daily_quote_date') || '';
+        
+          const bar   = document.getElementById('welcome_bar');
+          const msg   = document.getElementById('welcome_msg');
+          const qel   = document.getElementById('welcome_quote');
+        
+          if(bar && msg && qel){
+            msg.textContent = `Welcome back, ${name}!`;
+            qel.textContent = quote ? `“${quote}”` : '';
+            bar.style.display = 'block';
+          }
+        
+          // (Optional) If you want auto-refresh at midnight without re-login, uncomment:
+          /*
+          setInterval(()=>{
+            const now = new Date();
+            const today = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+            if (today !== date) location.reload();
+          }, 5*60*1000);
+          */
+        })();
+        </script>
+        <script src="include.js" defer></script>
+        <script src="lifecompass.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</body>
+</html>
